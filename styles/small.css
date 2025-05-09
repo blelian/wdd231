@@ -18,9 +18,10 @@ header {
   background-color: var(--header-bg-color);
   color: var(--header-text-color);
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 1rem;
-  text-align: left;
+  text-align: center;
 }
 
 header img {
@@ -28,12 +29,20 @@ header img {
   height: 100px;
   border-radius: 50%;
   margin-right: 1rem;
+  order: 1;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  order: 2;
+  text-align: left;
 }
 
 nav {
   background-color: var(--nav-bg-color);
   padding: 0.5rem;
-  text-align: center; /* Add this line */
+  text-align: center;
 }
 
 nav ul {
@@ -65,13 +74,6 @@ main {
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
-}
-
-main h1 {
-  color: darkslategrey;
-  width: 100%;
-  text-align: left;
-  margin-bottom: 1rem;
 }
 
 .sections-container {
@@ -140,6 +142,7 @@ button.rounded-button {
 }
 
 .section-label {
+  font-size: 1.5rem;
   margin: 1.5rem 0;
   color: darkslategrey;
   width: 100%;
@@ -147,10 +150,4 @@ button.rounded-button {
   margin-bottom: 1rem;
   font-family: var(--font-family);
   font-weight: bolder;
-}
-
-.document-title{
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: bold; 
 }
