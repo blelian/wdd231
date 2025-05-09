@@ -32,11 +32,12 @@ header img {
   order: 1;
 }
 
-header h1 {
+.document-head{
   margin: 0;
   font-size: 1.5rem;
   order: 2;
   text-align: left;
+  font-weight: bold;
 }
 
 nav {
@@ -150,4 +151,16 @@ button.rounded-button {
   margin-bottom: 1rem;
   font-family: var(--font-family);
   font-weight: bolder;
+}
+
+main h1.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
