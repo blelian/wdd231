@@ -143,3 +143,10 @@ button.rounded-button {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.section-label {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem 0;
+  color: #333;
+}

@@ -144,3 +144,10 @@ button.rounded-button {
   cursor: pointer;
   font-family: var(--font-family);
 }
+
+.section-label {
+  font-size: 2rem;
+  text-align: left;
+  margin: 1.5rem 0;
+  color: #222;
+}
