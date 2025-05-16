@@ -1,0 +1,13 @@
+@media (min-width: 600px) {
+    main {
+        padding: 40px;
+    }
+
+    section {
+        flex: 1 1 calc(25% - 20px);
+    }
+
+    img {
+        max-width: 200px;
+    }
+}
