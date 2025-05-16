@@ -35,6 +35,8 @@ main {
     padding: 20px;
     border: transparent;
     box-shadow: 0 0 30px black;
+    margin: 20px;
+    margin-top: 0.5px;
 }
 
 #cards {
