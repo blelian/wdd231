@@ -17,11 +17,6 @@ body {
     padding: 0;
     font-weight: bold;
     background-color: var(--background-color);
-    background-image: url('../images/commerce.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
 }
 
 header {
@@ -110,22 +105,9 @@ main {
 }
 
 .grid-view .member-card {
-    flex: 1 1 calc(100% - 20px);
-    max-width: 100%;
-}
-
-@media (min-width: 600px) {
-    .grid-view .member-card {
-        flex: 1 1 calc(45% - 20px);
-        max-width: 45%;
-    }
-}
-
-@media (min-width: 900px) {
-    .grid-view .member-card {
-        flex: 1 1 calc(30% - 20px);
-        max-width: 30%;
-    }
+    flex: 0 0 calc(50% - 20px);
+    margin: 10px;
+    max-width: 300px;
 }
 
 .member-card {
@@ -134,14 +116,13 @@ main {
     padding: 20px;
     text-align: center;
     margin: 10px;
-    width: 100%;
+    width: 90%;
     max-width: 300px;
-    height: auto;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-    flex: 1 1 calc(100% - 20px);
 }
 
 .image-container {
@@ -164,8 +145,8 @@ h2 {
     font-size: 1.5rem;
     margin: 10px 0;
     color: var(--primary-color);
-    font-weight: 800;
-}
+      font-weight: 800;
+}   
 
 footer {
     text-align: center;
