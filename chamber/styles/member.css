@@ -43,7 +43,6 @@ a:focus {
   color: #1E1A4F;
 }
 
-
 nav {
   background-color: var(--image-background);
   border-top: 1px solid var(--primary-color);
@@ -75,10 +74,10 @@ nav ul li a:hover {
 }
 
 .logo {
-  width: 60px;          
-  height: 72px;         
-  object-fit: contain;  
-  display: block;       
+  width: 60px;
+  height: 72px;
+  object-fit: contain;
+  display: block;
 }
 
 main {
@@ -98,7 +97,7 @@ main h1 {
 }
 
 #members {
-  min-height: 400px; 
+  min-height: 400px;
 }
 
 .toggle-controls {
@@ -128,6 +127,12 @@ main h1 {
 #cards.list-view {
   flex-direction: column;
   align-items: center;
+}
+
+#cards.grid-view {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
 .member-card {
