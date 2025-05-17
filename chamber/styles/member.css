@@ -74,6 +74,13 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
+.logo {
+  width: 60px;          
+  height: 72px;         
+  object-fit: contain;  
+  display: block;       
+}
+
 main {
   padding: 1rem;
   max-width: 1200px;
