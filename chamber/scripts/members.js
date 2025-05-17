@@ -19,7 +19,7 @@ function displayCompanies(companies) {
         card.classList.add('member-card');
         card.innerHTML = `
             <div class="image-container">
-                <img data-src="${c.image}" alt="${c.name}" class="lazy-image" width="200" height="200" fetchpriority="${fetchPriority}">
+                <img class="lazy-image" data-src="${c.image}" alt="${c.name}" width="200" height="200" fetchpriority="${fetchPriority}" loading="lazy">
             </div>
             <h2>${c.name}</h2>
             <p>${c.address}</p>
@@ -34,7 +34,7 @@ function displayCompanies(companies) {
 function toggleView(view) {
     const cards = document.querySelector('#cards');
     cards.classList.remove('grid-view', 'list-view');
-    cards.classList.add(view + '-view');
+    cards.classList.add(`${view}-view`);
 }
 
 function observeLazyImages() {

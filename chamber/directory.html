@@ -10,19 +10,17 @@
   <meta property="og:description" content="Explore Chamber of Commerce members and connect with local businesses.">
   <meta property="og:url" content="https://blelian.github.io/wdd231/chamber/directory.html">
   <meta property="og:locale" content="en_US">
+  <link rel="icon" href="../images/black-bull.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" as="image" href="images/sund-innovations.webp">
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap">
   </noscript>
-  <title>Midlands Chamber of Commerce</title>
-  <link rel="icon" href="../images/black-bull.ico">
   <link rel="stylesheet" href="../styles/normalize.css">
-  <link rel="preload" href="styles/member.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="styles/member.css"></noscript>
+  <link rel="stylesheet" href="styles/member.css">
   <link rel="stylesheet" href="styles/member-larger.css" media="screen and (min-width: 600px)">
+  <title>Midlands Chamber of Commerce</title>
   <script src="../scripts/date.js" defer></script>
   <script src="scripts/members.js" defer></script>
 </head>
@@ -43,11 +41,11 @@
   <main>
     <h1>Midlands Chamber of Commerce</h1>
     <section class="toggle-controls">
-      <button id="list-view-button">⋮⋮⋮</button>
-      <button id="grid-view-button">≡≡≡</button>
+      <button id="list-view-button" aria-label="Switch to list view">⋮⋮⋮</button>
+      <button id="grid-view-button" aria-label="Switch to grid view">≡≡≡</button>
     </section>
     <section id="members">
-      <div id="cards" class="grid-view"></div>
+      <div id="cards"></div>
     </section>
   </main>
   <footer>
