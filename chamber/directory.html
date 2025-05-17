@@ -6,14 +6,14 @@
   <meta name="author" content="Blessing Mpofu, WDD231 student at BYU Idaho" />
   <meta name="description" content="Business directory for the Chamber of Commerce." />
   <meta property="og:title" content="WDD231 - Blessing Mpofu - Chamber Directory" />
-  <meta property="og:image" content="https://blelian.github.io/wdd231/chamber/images/.webp" />
+  <meta property="og:image" content="https://blelian.github.io/wdd231/chamber/images/sund-innovations.webp" />
   <meta property="og:description" content="Explore Chamber of Commerce members and connect with local businesses." />
   <meta property="og:url" content="https://blelian.github.io/wdd231/chamber/directory.html" />
   <meta property="og:locale" content="en_US" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
-  <title>Chamber Directory - WDD231</title>
+  <title>Midlands Chamber of Commerce</title>
   <link rel="icon" href="../images/black-bull.ico" />
   <link rel="stylesheet" href="../styles/normalize.css" />
   <link rel="stylesheet" href="styles/member.css" />
@@ -23,12 +23,10 @@
 </head>
 <body>
   <header>
-  <div class="header-container">
-    <img src="images/commerce.webp" alt="Chamber Logo" class="logo" />
-    <h1 aria-hidden="true">Midlands Chamber of Commerce</h1>
-  </div>
-</header>
-
+    <div class="header-container">
+      <img src="images/logo.webp" alt="Chamber Logo" class="logo" />
+    </div>
+  </header>
 
   <nav>
     <ul>
@@ -40,20 +38,21 @@
   </nav>
 
   <main>
-    <h1 class="visually-hidden">Midlands Chamber of Commerce</h1>
+    <h1>Midlands Chamber of Commerce</h1>
     <section class="toggle-controls">
       <button id="list-view-button">⋮⋮⋮</button>
       <button id="grid-view-button">≡≡≡</button>
     </section>
 
     <section id="members">
+      <h2>Our Members</h2>
       <div id="cards" class="grid-view"></div>
     </section>
   </main>
 
   <footer>
-    <p><span id="currentyear"></span> Blessing Mpofu | WDD 231 | Midlands, Zimbabwe</p>
-    <p><span id="lastmodified"></span></p>
+    <p id="currentyear"></p>
+    <p id="lastmodified"></p>
   </footer>
 </body>
 </html>
