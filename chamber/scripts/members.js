@@ -4,6 +4,7 @@ async function fetchCompanies() {
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         const companies = await response.json();
         displayCompanies(companies);
+        observeLazyImages();
     } catch (error) {
         console.error('Failed to fetch company data:', error);
     }
@@ -17,7 +18,7 @@ function displayCompanies(companies) {
         card.classList.add('member-card');
         card.innerHTML = `
             <div class="image-container">
-                <img src="${c.image}" alt="${c.name}" />
+                <img data-src="${c.image}" alt="${c.name}" class="lazy-image" width="200" height="200">
             </div>
             <h2>${c.name}</h2>
             <p>${c.address}</p>
@@ -35,25 +36,36 @@ function toggleView(view) {
     cards.classList.add(view + '-view');
 }
 
+function observeLazyImages() {
+    const images = document.querySelectorAll('img.lazy-image');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                observer.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: '100px',
+        threshold: 0.1
+    });
+
+    images.forEach(img => observer.observe(img));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const listBtn = document.querySelector('#list-view-button');
     const gridBtn = document.querySelector('#grid-view-button');
-
-    listBtn.textContent = '\u22EE\u22EE\u22EE';
-    gridBtn.textContent = '\u2261\u2261\u2261';
 
     const defaultView = window.innerWidth >= 600 ? 'grid' : 'list';
     toggleView(defaultView);
 
     fetchCompanies();
 
-    listBtn.addEventListener('click', () => {
-        toggleView('list');
-    });
-
-    gridBtn.addEventListener('click', () => {
-        toggleView('grid');
-    });
+    listBtn.addEventListener('click', () => toggleView('list'));
+    gridBtn.addEventListener('click', () => toggleView('grid'));
 
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav ul li a');
@@ -71,7 +83,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.6 });
 
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+    sections.forEach(section => observer.observe(section));
 });
