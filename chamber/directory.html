@@ -1,66 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Blessing Mpofu, WDD231 student at BYU Idaho" />
-    <meta name="description" content="A Page to display the business directory of the Chamber of Commerce." />
-    <meta property="og:title" content="WDD231 - Frontend Web Development - Blessing Mpofu" />
-    <meta property="og:image" content="https://blelian.github.io/wdd231/chamber/images/sund-innovations.webp" />
-    <meta property="og:description" content="Explore web development coursework and insights by Blessing Mpofu, a student at BYU-Idaho. This is a business directory page which displays the number of businesses in the Chamber of Commerce." />
-    <meta property="og:url" content="https://blelian.github.io/wdd231/chamber/directory.html/" />
-    <meta property="og:locale" content="en_US" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
-    <title>WDD231 - Frontend Web Development - Blessing Mpofu</title>
-    <link rel="stylesheet" href="../styles/normalize.css" />
-    <link rel="stylesheet" href="styles/member.css" />
-    <link rel="stylesheet" href="styles/member-larger.css">
-    <link rel="icon" href="../images/black-bull.ico" />
-    <script src="scripts/members.js" defer></script>
-    <script src="../scripts/date.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Blessing Mpofu, WDD231 student at BYU Idaho" />
+  <meta name="description" content="Business directory for the Chamber of Commerce." />
+  <meta property="og:title" content="WDD231 - Blessing Mpofu - Chamber Directory" />
+  <meta property="og:image" content="https://blelian.github.io/wdd231/chamber/images/sund-innovations.webp" />
+  <meta property="og:description" content="Explore Chamber of Commerce members and connect with local businesses." />
+  <meta property="og:url" content="https://blelian.github.io/wdd231/chamber/directory.html" />
+  <meta property="og:locale" content="en_US" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <title>Chamber Directory - WDD231</title>
+  <link rel="icon" href="../images/black-bull.ico" />
+  <link rel="stylesheet" href="../styles/normalize.css" />
+  <link rel="stylesheet" href="styles/member.css" />
+  <link rel="stylesheet" href="styles/member-larger.css" />
+  <script src="scripts/members.js" defer></script>
+  <script src="../scripts/date.js" defer></script>
 </head>
 <body>
-    <header>
-        <p>Business Directory</p>
-        <div id="toggle-buttons">
-            <button id="list-view-button">List</button>
-            <button id="grid-view-button">Grid</button>
-        </div>
-    </header>
-   <main>
-  <h1>Business Directory - WDD231 Frontend Project by Blessing Mpofu</h1>
-  <div id="main-title">
-    <nav>
-      <ul>
-        <li><a href="#members">Members</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+  <header>
+    <div class="header-container">
+      <img src="images/commerce.webp" alt="Chamber Logo" class="logo" />
+      <h1>Midlands Chamber of Commerce</h1>
+    </div>
+  </header>
 
-  <section id="members">
-    <h2>Our Members</h2>
-    <div id="cards" class="list-view"></div>
-  </section>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="discover.html">Discover</a></li>
+      <li><a href="directory.html" class="active">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
 
-  <section id="about">
-    <h2>About the Chamber</h2>
-    <p>Some information about the Chamber...</p>
-  </section>
+  <main>
+    <section class="toggle-controls">
+      <button id="list-view-button">⋮⋮⋮</button>
+      <button id="grid-view-button">≡≡≡</button>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@chamber.org</p>
-  </section>
-</main>
+    <section id="members">
+      <div id="cards" class="grid-view"></div>
+    </section>
+  </main>
 
-
-    <footer>
-        <p><span id="currentyear"></span> Blessing Mpofu, Midlands, Zimbabwe</p>
-        <p><span id="lastmodified"></span></p>
-    </footer>
+  <footer>
+    <p><span id="currentyear"></span> Blessing Mpofu | WDD 231 | Midlands, Zimbabwe</p>
+    <p><span id="lastmodified"></span></p>
+  </footer>
 </body>
 </html>
