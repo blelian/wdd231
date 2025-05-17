@@ -14,12 +14,17 @@ function displayCompanies(companies) {
     const cardsContainer = document.querySelector('#cards');
     cardsContainer.innerHTML = '';
     companies.forEach((c, i) => {
-        const fetchPriority = i === 0 ? 'high' : 'auto';
+        const isFirst = i === 0;
         const card = document.createElement('div');
         card.classList.add('member-card');
         card.innerHTML = `
             <div class="image-container">
-                <img class="lazy-image" data-src="${c.image}" alt="${c.name}" width="200" height="200" fetchpriority="${fetchPriority}" loading="lazy">
+                <img 
+                    ${isFirst ? `src="${c.image}" loading="eager" fetchpriority="high"` : `data-src="${c.image}" class="lazy-image" loading="lazy"`}
+                    alt="${c.name}" 
+                    width="200" 
+                    height="200"
+                >
             </div>
             <h2>${c.name}</h2>
             <p>${c.address}</p>
