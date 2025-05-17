@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+#cards.list-view .image-container {
+  display: none;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
