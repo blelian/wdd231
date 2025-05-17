@@ -2,29 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="author" content="Blessing Mpofu, WDD231 student at BYU Idaho" />
-  <meta name="description" content="Business directory for the Chamber of Commerce." />
-  <meta property="og:title" content="WDD231 - Blessing Mpofu - Chamber Directory" />
-  <meta property="og:image" content="https://blelian.github.io/wdd231/chamber/images/commerce.webp" />
-  <meta property="og:description" content="Explore Chamber of Commerce members and connect with local businesses." />
-  <meta property="og:url" content="https://blelian.github.io/wdd231/chamber/directory.html" />
-  <meta property="og:locale" content="en_US" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Blessing Mpofu, WDD231 student at BYU Idaho">
+  <meta name="description" content="Business directory for the Chamber of Commerce.">
+  <meta property="og:title" content="WDD231 - Blessing Mpofu - Chamber Directory">
+  <meta property="og:image" content="https://blelian.github.io/wdd231/chamber/images/commerce.webp">
+  <meta property="og:description" content="Explore Chamber of Commerce members and connect with local businesses.">
+  <meta property="og:url" content="https://blelian.github.io/wdd231/chamber/directory.html">
+  <meta property="og:locale" content="en_US">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"></noscript>
   <title>Midlands Chamber of Commerce</title>
-  <link rel="icon" href="../images/black-bull.ico" />
-  <link rel="stylesheet" href="../styles/normalize.css" />
-  <link rel="stylesheet" href="styles/member.css" />
-  <link rel="stylesheet" href="styles/member-larger.css" media="screen and (min-width: 600px)" />
+  <link rel="icon" href="../images/black-bull.ico">
+  <link rel="stylesheet" href="../styles/normalize.css">
+  <link rel="preload" href="styles/member.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles/member.css"></noscript>
+  <link rel="stylesheet" href="styles/member-larger.css" media="screen and (min-width: 600px)">
   <script src="scripts/members.js" defer></script>
   <script src="../scripts/date.js" defer></script>
 </head>
 <body>
   <header>
     <div class="header-container">
-      <img src="images/commerce.webp" alt="Chamber Logo" class="logo" />
+      <img src="images/commerce.webp" alt="Chamber Logo" class="logo" width="60" height="60" fetchpriority="high" />
     </div>
   </header>
 
@@ -32,7 +34,7 @@
     <ul>
       <li><a href="../index.html">Home</a></li>
       <li><a href="discover.html">Discover</a></li>
-      <li><a href="directory.html" class="active">Directory</a></li>
+      <li><a href="directory.html" class="active" aria-current="page">Directory</a></li>
       <li><a href="join.html">Join</a></li>
     </ul>
   </nav>
