@@ -33,11 +33,6 @@ header {
   gap: 1rem;
 }
 
-.logo {
-  width: 60px;
-  height: auto;
-}
-
 a {
   color: #2F2A6A;
   text-decoration: underline;
@@ -93,6 +88,10 @@ main h1 {
   text-align: center;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
+}
+
+#members {
+  min-height: 400px; 
 }
 
 .toggle-controls {
