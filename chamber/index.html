@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Blessing Mpofu" />
+  <meta name="description" content="Midlands Chamber of Commerce - Home Page" />
+  <title>Midlands Chamber of Commerce</title>
+  <link rel="stylesheet" href="../styles/normalize.css" />
+  <link rel="stylesheet" href="styles/home.css" media="screen and (max-width: 600px)" />
+  <link rel="stylesheet" href="styles/home-larger.css" media="screen and (min-width: 601px)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlight.js" defer></script>
+</head>
+<body>
+  <div class="header-container">
+    <header>
+      <img src="images/commerce.webp" alt="Chamber Logo" class="logo" />
+      <div class="header-content">
+        <p class="header-title">Mighty Bulls</p>
+        <p class="header-subtitle">Chamber of Commerce</p>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Empowering Local Business</h1>
+      <p>Join the Midlands Chamber of Commerce and elevate your business visibility and success.</p>
+      <a href="join.html" class="cta">Join Now</a>
+    </div>
+  </section>
+
+  <main>
+    <div class="info-grid">
+      <section class="events">
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li><strong>June 5:</strong> Business Networking Breakfast</li>
+          <li><strong>June 12:</strong> Local Market Expo</li>
+          <li><strong>June 18:</strong> Leadership Workshop</li>
+        </ul>
+      </section>
+
+      <section class="weather">
+        <h2>Current Weather</h2>
+        <div id="weather-info">
+          <p>Loading weather data...</p>
+        </div>
+      </section>
+
+      <section class="weather-forecast">
+        <h2>Weather Forecast</h2>
+        <div id="spotlight-container"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Blessing Mpofu | WDD 231</p>
+    <p>Midlands Chamber of Commerce | Midlands, Zimbabwe | info@midlandschamber.org</p>
+    <p><span id="currentyear"></span></p>
+    <p><span id="lastmodified"></span></p>
+  </footer>
+</body>
+</html>
