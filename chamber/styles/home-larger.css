@@ -1,11 +1,9 @@
 :root {
   --primary-color: #2F2A6A;
-  --secondary-color: #ffffff;
   --text-color: #ffffff;
   --background-color: #f4f4f4;
-  --accent-color: #555555;
+  --accent-color: #000000;
   --image-background: #D9D9EC;
-  --subtitle-color: #2F2A6A;
 }
 
 @media screen and (min-width: 600px) {
@@ -54,7 +52,7 @@
 
   .header-subtitle {
     font-size: 1.5rem;
-    color: var(--subtitle-color);
+    color: var(--primary-color);
     margin: 0;
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -89,7 +87,7 @@
   nav ul li a.active,
   nav ul li a:hover {
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--text-color);
     border-radius: 5px;
   }
 
@@ -100,7 +98,7 @@
     aspect-ratio: 16 / 9;
     min-height: 400px;
     margin: 0 auto;
-    background-image: url('../images/hero.jpeg');
+    background-image: url('../images/hero.webp');
     background-size: cover;
     background-position: center;
     color: var(--text-color);
@@ -119,16 +117,22 @@
     text-align: right;
   }
 
-  .hero-text h1,
+  .big,
   .hero-text p,
   .hero-text a.cta {
     margin: 0.3rem 0;
-    color: var(--secondary-color);
+    color: var(--text-color);
   }
+.big{
+  font-size: xx-large;
+}
 
+main h1 {
+  color: var(--primary-color);
+}
   .hero-text a.cta {
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--text-color);
     padding: 0.5rem 1rem;
     border-radius: 5px;
     text-decoration: none;
@@ -145,11 +149,12 @@
     padding: 2rem;
   }
 
-  .info-grid {
+  .info-row {
     display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    align-items: start;
+    align-items: stretch;
+    margin-bottom: 2rem;
   }
 
   .events,
@@ -158,6 +163,9 @@
     background-color: var(--image-background);
     padding: 1.5rem;
     border-left: 4px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .events h2,
@@ -186,7 +194,7 @@
   }
 
   .spotlight-card {
-    background-color: var(--secondary-color);
+    background-color: var(--text-color);
     border: 1px solid var(--primary-color);
     padding: 1rem;
     width: 280px;
@@ -209,11 +217,79 @@
     text-decoration: underline;
   }
 
+  .featured-businesses {
+    margin: 4rem 0 2rem;
+    padding: 2rem;
+    background-color: var(--image-background);
+    border-left: 5px solid var(--primary-color);
+  }
+
+  .featured-businesses h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 2rem;
+  }
+
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .featured-card {
+    background-color: var(--text-color);
+    border: 1px solid var(--primary-color);
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .featured-card img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: contain;
+    background-color: var(--image-background);
+    margin-bottom: 1rem;
+  }
+
+  .featured-card h3 {
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+    font-size: 1.3rem;
+  }
+
+  .featured-card p {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .featured-card a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: underline;
+    margin-top: auto;
+  }
+#menu-toggle {
+  display: none;
+}
+
   footer {
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--text-color);
     text-align: center;
     padding: 1rem;
     font-size: 1rem;
   }
 }
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between icons */
+  margin-top: 10px;
+}
+

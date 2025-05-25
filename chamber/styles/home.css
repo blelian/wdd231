@@ -1,104 +1,197 @@
 :root {
-  --primary-color: #2F2A6A;
-  --secondary-color: #ffffff;
-  --text-color: #ffffff;
-  --background-color: #f4f4f4;
-  --accent-color: #555555;
-  --image-background: #D9D9EC;
-}
-
-* {
-  box-sizing: border-box;
+  --primary-color: #0a3d62;
+  --secondary-color: #3c6382;
+  --accent-color: #82ccdd;
+  --background-color: #f5f6fa;
+  --text-color: #2f3640;
+  --highlight-color: #d9d9ec;
+  --header-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
 }
 
 body {
+  font-family: var(--body-font);
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
-  background-color: var(--background-color);
-  font-weight: bold;
 }
 
 header {
-  background-color: var(--secondary-color);
   display: flex;
-  justify-content: center;
   align-items: center;
+  background-color: var(--primary-color);
+  color: white;
   padding: 1rem;
 }
 
 .logo {
-  height: 72px;
-  width: 60px;
-  object-fit: contain;
+  width: 50px;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title {
+  font-family: var(--header-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header-subtitle {
+  font-family: var(--header-font);
+  font-size: 1rem;
+  margin: 0;
+}
+
+#menu-toggle {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+  display: block;
 }
 
 nav {
-  background-color: var(--image-background);
-  border-top: 1px solid var(--primary-color);
-  border-bottom: 1px solid var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 nav ul {
   list-style: none;
-  padding: 0.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+  padding: 0;
   margin: 0;
+  display: none;
+  flex-direction: column;
 }
 
-nav ul li a {
+nav ul.show {
+  display: flex;
+}
+
+nav li {
+  border-top: 1px solid var(--accent-color);
+}
+
+nav a {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.hero {
+  background: url('../images/hero.webp') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero-text .big {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.hero .cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color);
   color: var(--primary-color);
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.2rem;
-  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-nav ul li a.active,
-nav ul li a:hover {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  border-radius: 5px;
+h1,
+h2 {
+  font-family: var(--header-font);
+  color: var(--primary-color);
 }
 
 main {
   padding: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-.hero {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  padding: 2rem 1rem;
-  text-align: center;
+.info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.cta-button {
-  display: inline-block;
-  margin-top: 1rem;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 5px;
+.info-row section:nth-child(odd) {
+  background-color: var(--highlight-color);
 }
 
-.events,
-.weather,
-.spotlights {
-  margin: 2rem 0;
-  background: var(--image-background);
+.info-row section:nth-child(even) {
+  background-color: white;
+}
+
+.info-row section {
   padding: 1rem;
   border-left: 4px solid var(--primary-color);
 }
 
+.featured-businesses {
+  padding: 1rem;
+  background-color: var(--highlight-color);
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.featured-grid .card {
+  border: 1px solid var(--accent-color);
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.featured-grid img {
+  width: 100px;
+  height: auto;
+  margin: 0 auto 1rem;
+}
+
 footer {
   background-color: var(--primary-color);
-  color: var(--secondary-color);
+  color: white;
   text-align: center;
   padding: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+}
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between icons */
+  margin-top: 10px;
 }
