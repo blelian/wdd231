@@ -245,3 +245,24 @@ footer .social-icons {
     flex: 1;
   }
 }
+a:focus,
+button:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+nav a {
+  cursor: pointer;
+}
+
+.hero-text .big {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
