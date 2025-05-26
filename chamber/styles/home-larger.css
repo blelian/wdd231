@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #1a1a4d;
+  --primary-color: #0a1a4d;
   --text-color: #ffffff;
   --background-color: #f4f4f4;
-  --accent-color: #000000;
-  --image-background: #d2d2e2;
+  --accent-color: #111111;
+  --image-background: #c1c1d1;
 }
 
 body {
@@ -52,7 +52,7 @@ header {
   font-weight: 700;
   letter-spacing: 0.5px;
   text-transform: capitalize;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 nav {
@@ -95,7 +95,7 @@ nav ul li a:hover {
   background-size: cover;
   background-position: center;
   color: var(--text-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   overflow: hidden;
 }
 
@@ -104,7 +104,7 @@ nav ul li a:hover {
   bottom: 20px;
   right: 20px;
   max-width: 40%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
   padding: 1rem;
   border-radius: 5px;
   text-align: right;
@@ -133,7 +133,7 @@ nav ul li a:hover {
 }
 
 .hero-text a.cta:hover {
-  background-color: #111133;
+  background-color: #080f33;
 }
 
 main {
@@ -162,7 +162,7 @@ main h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .events ul {
@@ -204,7 +204,7 @@ main h1 {
   border: 1px solid var(--primary-color);
   padding: 1rem;
   width: 280px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
   text-align: center;
 }
 
@@ -248,7 +248,7 @@ main h1 {
   background-color: var(--text-color);
   border: 1px solid var(--primary-color);
   padding: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
   text-align: center;
   display: flex;
   flex-direction: column;
