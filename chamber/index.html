@@ -3,8 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="author" content="Blessing Mpofu" />
+  <meta name="author" content="Blessing Mpofu, WDD231 student at BYU Idaho" />
   <meta name="description" content="Midlands Chamber of Commerce - Home Page" />
+  <meta property="og:title" content="WDD231 - Blessing Mpofu - Chamber Directory">
+  <meta property="og:image" content="https://blelian.github.io/wdd231/chamber/images/hero.webp">
+  <meta property="og:description" content="Explore Chamber of Commerce members and connect with local businesses.">
+  <meta property="og:url" content="https://blelian.github.io/wdd231/chamber/index.html">
+  <meta property="og:locale" content="en_US">
+  <link rel="icon" href="../images/black-bull.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap">
+  </noscript>
   <title>Midlands Chamber of Commerce</title>
   <link rel="stylesheet" href="../styles/normalize.css" />
   <link rel="stylesheet" href="styles/home.css" media="screen and (max-width: 600px)" />
@@ -15,6 +27,7 @@
   <script src="scripts/weather.js" defer></script>
   <script src="scripts/members.js" defer></script>
   <script src="scripts/navigation.js" defer></script>
+  <script src="../scripts/date.js"></script>
 </head>
 <body>
   <div class="header-container">
@@ -81,33 +94,26 @@
   <p>Midlands Chamber of Commerce | Midlands, Zimbabwe | info@midlandschamber.org</p>
   <div class="social-icons">
     <a href="https://www.facebook.com/https://web.facebook.com/blessing.mpofu.35" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1877F2" viewBox="0 0 24 24">
-        <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.342v21.316C0 23.4.6 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.414c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.466.098 2.797.142v3.243l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.59l-.467 3.622h-3.123V24h6.116c.725 0 1.324-.6 1.324-1.342V1.342C24 .6 23.4 0 22.675 0z"/>
-      </svg>
-    </a>
+  <img src="images/social/facebook.webp" alt="Welcome to our Facebook page" width="24" height="24" />
+</a>
+<a href="https://www.facebook.com/https://web.facebook.com/blessing.mpofu.35" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon">
+  <img src="images/social/facebook-messenger.webp" alt="Welcome to our Facebook page" width="24" height="24" />
+</a>
     <a href="https://www.linkedin.com/in/blessingmpofu1" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#0a66c2" viewBox="0 0 24 24">
-        <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.026-3.036-1.85-3.036-1.852 0-2.134 1.445-2.134 2.938v5.667H9.355V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.605 0 4.27 2.372 4.27 5.456v6.285zM5.337 7.433a2.063 2.063 0 1 1 0-4.126 2.063 2.063 0 0 1 0 4.126zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .775 0 1.728v20.544C0 23.223.792 24 1.771 24h20.451C23.2 24 24 23.223 24 22.272V1.728C24 .775 23.2 0 22.225 0z"/>
-      </svg>
+      <img src="images/social/linkedin.webp" alt="Welcome to our LinkedIn page" width="24" height="24">
     </a>
     <a href="https://wa.me/+27845179156" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#25d366" viewBox="0 0 24 24">
-        <path d="M20.52 3.484A11.807 11.807 0 0 0 12 0C5.373 0 0 5.373 0 12a11.93 11.93 0 0 0 1.91 6.12L0 24l5.988-1.956a11.873 11.873 0 0 0 6.012 1.548c6.627 0 12-5.373 12-12a11.88 11.88 0 0 0-3.48-8.108zm-8.6 17.095c-1.94 0-3.66-.508-5.18-1.44l-.37-.22-3.57 1.168 1.204-3.48-.24-.36a7.893 7.893 0 0 1-1.23-4.28c0-4.385 3.567-7.95 7.96-7.95 2.12 0 4.11.826 5.6 2.325a7.886 7.886 0 0 1 2.33 5.63c0 4.386-3.565 7.95-7.95 7.95zm4.48-6.12c-.25-.12-1.47-.72-1.7-.8-.23-.08-.4-.12-.57.12s-.66.8-.81.96-.3.18-.55.06a7.3 7.3 0 0 1-2.16-1.33c-.08-.08-.84-.82-.84-2 0-1.18.86-2.16.98-2.32.12-.18.21-.18.5-.06.3.12 1.02.96 1.1 1.16.08.18.13.4.02.64-.1.22-.2.3-.38.5-.13.16-.26.35-.1.56.16.22.7 1.14 1.5 1.85.4.35.72.48 1.04.62.4.14.63.12.86-.07.22-.18.97-.9 1.1-1.2.13-.3.13-.56.1-.62-.03-.06-.2-.1-.44-.22z"/>
-      </svg>
+      <img src="images/social/whatsapp.webp" alt="Welcome to our Whatsapp page." width="24" height="24">
     </a>
     <a href="https://twitter.com/X.com/bullsurus" target="_blank" rel="noopener" aria-label="Twitter" class="social-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1da1f2" viewBox="0 0 24 24">
-        <path d="M23.954 4.569a10.18 10.18 0 0 1-2.825.775 4.932 4.932 0 0 0 2.165-2.724 9.864 9.864 0 0 1-3.127 1.195 4.916 4.916 0 0 0-8.373 4.482 13.936 13.936 0 0 1-10.11-5.13 4.822 4.822 0 0 0-.664 2.475c0 1.708.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.06a4.916 4.916 0 0 0 3.946 4.816 4.996 4.996 0 0 1-2.224.084 4.922 4.922 0 0 0 4.588 3.42A9.86 9.86 0 0 1 .96 19.54 13.94 13.94 0 0 0 7.548 21c9.142 0 14.307-7.72 14.307-14.416 0-.22-.005-.438-.015-.653a10.274 10.274 0 0 0 2.615-2.682z"/>
-      </svg>
+      <img src="images/social/twitter.webp" alt="Welcome to our Twitter page." width="24" height="24">
     </a>
     <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ff0000" viewBox="0 0 24 24">
-        <path d="M19.615 3.184a2.978 2.978 0 0 0-2.093-2.11C15.6.75 12 0.75 12 0.75s-3.6 0-5.523.324a2.978 2.978 0 0 0-2.093 2.11 31.357 31.357 0 0 0-.02 3.572v2.128a31.458 31.458 0 0 0 .02 3.572 2.978 2.978 0 0 0 2.093 2.11c1.923.324 5.523.324 5.523.324s3.6 0 5.523-.324a2.978 2.978 0 0 0 2.093-2.11 31.462 31.462 0 0 0 .02-3.572v-2.128a31.362 31.362 0 0 0-.02-3.572zM10 15.567V8.433l5.2 3.567-5.2 3.567z"/>
-      </svg>
+      <img src="images/social/youtube.webp" alt="Welcome to our Youtube page." width="24" height="24">
     </a>
       <a href="https://t.me/BlessingMpofu" target="_blank" rel="noopener" class="social-icon telegram" aria-label="Telegram">
-  <img src="images/social/telegram.svg" alt="Telegram" />
-</a>
+        <img src="images/social/telegram.webp" alt="Welcome to our Telegram page." width="24" height="24">
+      </a>
 </div>
   <p><span id="currentyear"></span></p>
   <p><span id="lastmodified"></span></p>
