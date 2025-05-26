@@ -1,7 +1,7 @@
 :root {
   --primary-color: #0a3d62;
   --secondary-color: #3c6382;
-  --accent-color: #3694a8;
+  --accent-color: #1b4f72;
   --background-color: #f5f6fa;
   --text-color: #2f3640;
   --highlight-color: #d9d9ec;
@@ -89,7 +89,7 @@ nav a {
 nav a:hover,
 nav a.active {
   background-color: var(--accent-color);
-  color: var(--primary-color);
+  color: var(--text-color);
 }
 
 .hero {
@@ -127,8 +127,8 @@ nav a.active {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background-color: var(--accent-color);
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
