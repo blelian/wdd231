@@ -145,6 +145,18 @@ main {
   border-left: 4px solid var(--primary-color);
 }
 
+.events {
+  background: url('../images/upcoming-events.webp') center/cover no-repeat;
+  color: white;
+  position: relative;
+  background-blend-mode: overlay;
+}
+
+.events h2, .events ul {
+  position: relative;
+  z-index: 2;
+}
+
 .featured-businesses {
   padding: 1rem;
   background-color: var(--highlight-color);
@@ -178,6 +190,13 @@ footer {
   font-size: 0.9rem;
 }
 
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
 @media (min-width: 768px) {
   nav ul {
     display: flex !important;
@@ -188,10 +207,16 @@ footer {
   #menu-toggle {
     display: none;
   }
-}
-footer .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Space between icons */
-  margin-top: 10px;
+
+  .featured-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .info-row {
+    flex-direction: row;
+  }
+
+  .info-row section {
+    flex: 1;
+  }
 }
