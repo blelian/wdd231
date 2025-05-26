@@ -93,10 +93,29 @@ nav a.active {
 }
 
 .hero {
-  background: url('../images/hero.webp') center/cover no-repeat;
+  background: none;
+  background-color: var(--primary-color);
+  position: relative;
+  overflow: hidden;
   color: white;
   text-align: center;
   padding: 4rem 1rem;
+}
+
+.hero::before {
+  content: "";
+  background: url('../images/hero.webp') center/cover no-repeat;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text .big {
