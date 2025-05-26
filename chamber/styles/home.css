@@ -132,6 +132,12 @@ nav a.active {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero .cta:hover {
+  background-color: #ffffff;
+  color: var(--primary-color);
 }
 
 h1,
