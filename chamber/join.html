@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Blessing Mpofu, WDD231 student at BYU Idaho">
+    <meta name="description" content="Join Page for the Chamber of Commerce.">
+    <meta property="og:title" content="WDD231 - Blessing Mpofu - Chamber Join Page">
+    <meta property="og:image" content="https://blelian.github.io/wdd231/chamber/images/commerce.webp">
+    <meta property="og:description" content="Explore Chamber of Commerce members and connect with local businesses.">
+    <meta property="og:url" content="https://blelian.github.io/wdd231/chamber/join.html">
+    <meta property="og:locale" content="en_US">
+    <link rel="icon" href="../images/black-bull.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap">
+    </noscript>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/join.css" media="screen and (max-width: 600px)">
+    <link rel="stylesheet" href="styles/join-larger.css" media="screen and (min-width: 601px)">
+    <title>Join | Midlands Chamber of Commerce</title>
+    <script src="scripts/join.js" defer></script>
+    <script src="../scripts/date.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-space">
+            <img src="images/commerce.webp" alt="Chamber Logo" class="logo" width="60" height="72" fetchpriority="high">
+        </div>
+        <h1>Midlands Chamber of Commerce</h1>
+        <button id="menu-toggle">☰</button>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./discover.html">Discover</a></li>
+                <li><a href="./directory.html">Directory</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Join the Chamber</h2>
+            <form id="membershipForm" method="get" action="thank-you.html">
+                <label>
+                    First Name
+                    <input type="text" name="fname" title="First Name" required autocomplete="given-name">
+                </label>
+                <label>
+                    Last Name
+                    <input type="text" name="lname" title="Last Name" required autocomplete="family-name">
+                </label>
+                <label>
+                    Organizational Title
+                    <input type="text" name="orgtitle" title="Organizational Title" required autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" title="Email Address" required autocomplete="email" placeholder="example@example.com">
+                </label>
+                <label>
+                    Mobile Phone
+                    <input type="tel" name="phone" title="Mobile Number" required autocomplete="tel">
+                </label>
+                <label>
+                    Organization Name
+                    <input type="text" name="orgname" title="Organization Name" required autocomplete="organization">
+                </label>
+                <label>
+                    Membership Level
+                    <select name="membership" title="Membership Level" required>
+                        <option value="">Select a level</option>
+                        <option value="np">NP Membership (Free)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+                <label>
+                    Business Description
+                    <textarea name="description" title="Business Description"></textarea>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp">
+                <input type="submit" value="Join Now">
+            </form>
+        </section>
+
+        <section class="membership-cards">
+            <div class="card np-card">
+                <h3>NP Membership</h3>
+                <a href="#np-modal">View Benefits</a>
+            </div>
+            <div class="card bronze-card">
+                <h3>Bronze Membership</h3>
+                <a href="#bronze-modal">View Benefits</a>
+            </div>
+            <div class="card silver-card">
+                <h3>Silver Membership</h3>
+                <a href="#silver-modal">View Benefits</a>
+            </div>
+            <div class="card gold-card">
+                <h3>Gold Membership</h3>
+                <a href="#gold-modal">View Benefits</a>
+            </div>
+        </section>
+
+        <dialog id="np-modal">
+            <h4>NP Membership Benefits</h4>
+            <p>Access to networking events. Free listing in the directory.</p>
+            <button onclick="document.getElementById('np-modal').close()">Close</button>
+        </dialog>
+        <dialog id="bronze-modal">
+            <h4>Bronze Membership Benefits</h4>
+            <p>Includes NP benefits + discounted event fees.</p>
+            <button onclick="document.getElementById('bronze-modal').close()">Close</button>
+        </dialog>
+        <dialog id="silver-modal">
+            <h4>Silver Membership Benefits</h4>
+            <p>Includes Bronze benefits + homepage spotlight opportunities.</p>
+            <button onclick="document.getElementById('silver-modal').close()">Close</button>
+        </dialog>
+        <dialog id="gold-modal">
+            <h4>Gold Membership Benefits</h4>
+            <p>All previous benefits + featured promotions and exclusive invites.</p>
+            <button onclick="document.getElementById('gold-modal').close()">Close</button>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>Blessing Mpofu | WDD 231</p>
+        <p>Midlands Chamber of Commerce | Midlands, Zimbabwe | info@midlandschamber.org</p>
+        <p><span id="currentyear"></span></p>
+        <p><span id="lastmodified"></span></p>
+    </footer>
+</body>
+</html>

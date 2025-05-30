@@ -1,0 +1,2095 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://byui-cse.github.io/itm111-ww-course/week04/prepare.html -->
+<html lang="en-us" data-qb-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ITM 111 | Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./ITM 111 _ Project_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./ITM 111 _ Project_files/course.css">
+  <link rel="stylesheet" href="./ITM 111 _ Project_files/vs.min.css">
+<style type="text/css">.lf-progress {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  width: 100%;
+  /* margin: 0 10px; */
+  height: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.lf-progress:focus {
+  outline: none;
+  border: none;
+}
+.lf-progress::-moz-range-track {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+.lf-progress::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-moz-range-thumb {
+  -moz-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.lf-progress::-ms-fill-lower {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-fill-upper {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-thumb {
+  border: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress:focus::-ms-fill-lower {
+  background: #ccc;
+}
+.lf-progress:focus::-ms-fill-upper {
+  background: #ccc;
+}
+.lf-player-container :focus {
+  outline: 0;
+}
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-player-btn-container {
+  display: flex;
+  align-items: center;
+}
+.lf-player-btn {
+  cursor: pointer;
+  fill: #999;
+  width: 14px;
+}
+
+.lf-player-btn.active {
+  fill: #555;
+}
+
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 1;
+
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  padding: 10px;
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-arrow {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  bottom: -9px;
+  border-style: solid;
+  border-width: 10px 10px 0px 10px;
+}
+
+.lf-left-align,
+.lf-left-align .lfarrow {
+  left: 0;
+  right: unset;
+}
+
+.lf-right-align,
+.lf-right-align .lf-arrow {
+  right: 0;
+  left: unset;
+}
+
+.lf-text-input {
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  padding: 3px;
+  width: 60px;
+  margin: 0;
+}
+
+.lf-color-picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 90px;
+}
+
+.lf-color-selectors {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lf-color-component {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.lf-color-component strong {
+  width: 40px;
+}
+
+.lf-color-component input[type='range'] {
+  margin: 0 0 0 10px;
+}
+
+.lf-color-component input[type='number'] {
+  width: 50px;
+  margin: 0 0 0 10px;
+}
+
+.lf-color-preview {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+}
+
+.lf-preview {
+  height: 60px;
+  width: 60px;
+}
+
+.lf-popover-snapshot {
+  width: 150px;
+}
+.lf-popover-snapshot h5 {
+  margin: 5px 0 10px 0;
+  font-size: 0.75rem;
+}
+.lf-popover-snapshot a {
+  display: block;
+  text-decoration: none;
+}
+.lf-popover-snapshot a:before {
+  content: '⥼';
+  margin-right: 5px;
+}
+.lf-popover-snapshot .lf-note {
+  display: block;
+  margin-top: 10px;
+  color: #999;
+}
+.lf-player-controls > div {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.lf-player-controls > div:first-child {
+  margin-left: 0px;
+}
+.lf-player-controls > div:last-child {
+  margin-right: 0px;
+}
+</style></head>
+<body>
+  <header>
+    <div class="page">
+      <h1>ITM 111<span id="coursetitle">: Introduction to Databases</span></h1>
+      <img src="./ITM 111 _ Project_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+    <nav id="autogen-top-nav">
+      <!-- This nav is auto-generated -->
+      <span><a href="https://byui-cse.github.io/itm111-ww-course/index.html">Home</a></span>
+      <span><a href="https://byui-cse.github.io/itm111-ww-course/week01/index.html">W1</a></span>
+      <span><a href="https://byui-cse.github.io/itm111-ww-course/week02/index.html">W2</a></span>
+      <span><a href="https://byui-cse.github.io/itm111-ww-course/week03/index.html">W3</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/itm111-ww-course/week04/index.html">W4</a></span>
+      <span><a href="https://byui-cse.github.io/itm111-ww-course/week05/index.html">W5</a></span>
+      <span><a href="https://byui-cse.github.io/itm111-ww-course/week06/index.html">W6</a></span>
+      <span><a href="https://byui-cse.github.io/itm111-ww-course/week07/index.html">W7</a></span>
+      <!-- end auto-generated -->
+    </nav>
+    <h2>W04 Learning Activity: Data Retrieval</h2>
+    <h3>This week you will...</h3>
+    <ul>
+      <li>create single table queries using the SQL SELECT statement. </li>
+      <li>explore clauses, keywords and operators that define what data is retrieved.</li>
+      <li>learn what funcions are and how to use them in queries.</li>
+    </ul>
+    <h3>
+ </h3><h3>Overview</h3>
+    
+    <p>This material will help you build a foundation for this week's topic. Test your understanding by taking this week's prepare quiz in <a href="https://byupw.instructure.com/calendar#view_name=agenda" target="_blank">Canvas</a>. The quiz is open book and open note. You may retake the quiz up to 3 times to improve your score. </p>
+    <h3>Terms to Know</h3>
+    <dl>
+      <dt>SELECT:</dt>
+      <dd> A statement that describes the columns in the result set, used to retrieve table data.</dd>
+      <dt>FROM:</dt>
+      <dd> A command that indicated the table you are getting data from.</dd>
+      <dt>ORDER BY:</dt>
+      <dd> A keyword used to sort the rows of a result set.</dd>
+      <dt>LIMIT:</dt>
+      <dd> A clause used to show the number of rows to return in the result set.</dd>
+      <dt>DISTINCT:</dt>
+      <dd> A keyword used to eliminate duplicate rows in the result set.</dd>
+      <dt>WHERE:</dt>
+      <dd> A clause used to retrieve just the data you want; filters the data.</dd>
+      <dt>Arithmetic Operators:</dt>
+      <dd> Used to make calculations. Examples are multiplication (*), division (/), modulus (%), addition (+), and subtraction (-).</dd>
+      <dt>Comparison Operators:</dt>
+      <dd> Used to make comparisons to restrict information in the result set. Examples are equal to(=), less than(&lt;), less than or equal to(&lt;=), greater than (&gt;), greater than or equal to(&gt;=), and not equal to(&lt;&gt; or !=).</dd>
+      <dt>Logical Operators:</dt>
+      <dd> Use with multiple conditions to combine or negate search conditions. Examples are both conditions have to be true (AND), one of the conditions have to be true (OR) and negates the condition (NOT).</dd>
+      <dt>IN:</dt>
+      <dd> An operator that can test an expression to a list of expressions.</dd>
+      <dt>BETWEEN:</dt>
+      <dd> An operator that can compare an expression with a range of values.</dd>
+      <dt>LIKE: </dt>
+      <dd>Operator that matches string patterns to a test expression letting you filter the results according to certain string patterns.</dd>
+      <dt>REGEXP:</dt>
+      <dd> A regular expressions operator that allows much more complex string patterns to test expressions.</dd>
+      <dt>Null Value:</dt>
+      <dd> No value, blank. It is different from a zero value or a field that contains spaces, null values have been left blank when the row was added.</dd>
+      <dt>IS NULL (IS NOT NULL):</dt>
+      <dd> Constraints to test for null values. IS NULL for all nulls. IS NOT NULL for all that are not nulls.</dd>
+      <dt>ASC: </dt>
+      <dd>Keyword used with ORDER BY to sort the results in ascending order (smallest to largest).</dd>
+      <dt>DESC:</dt>
+      <dd> Keyword used with ORDER BY to sort the results in descending order (largest to smallest).</dd>
+      <dt>Order of Execution:</dt>
+      <dd> The order the system actually executes clauses. This is a different order from how the clauses are written in SQL code.</dd>
+      <dt>Function:</dt>
+      <dd> A stored program, or operation that when performed on data will returns a value or manipulated or convert the data.</dd>
+      <dt>Scalar Function:</dt>
+      <dd> A function that works on a single entity of data, not a group of data together.</dd>
+      <dt>Parameter:</dt>
+      <dd> Used to pass data values to a function. SQL function parameters are inside parentheses following the function name and if there is more than one parameter they are separated by a comma.</dd>
+      <dt>Concatenate:</dt>
+      <dd> Combining values, by appending them to each other, to form a single longer value.</dd>
+      <dt>Index numbering:</dt>
+      <dd> The number related to each character of a string. SQL index numbering starts at 1 for the first character.</dd>
+    </dl>
+    <h3>Retrieving Data</h3>
+    <p>Watch the single table queries video:</p>
+   <figure class="video-container"> <iframe width="560" height="315" src="./ITM 111 _ Project_files/Ay4I_MCVhbg.html" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></figure>
+    <p>(16:38 mins, <a class="inline_disabled" href="https://docs.google.com/document/d/e/2PACX-1vTpx8t5ehrHarcesimwUkP2EBFlKJ9LPXc0pJkw3C3Erookk9XR3VcU9En32Q-4UNU2OPuyH-MyYPO9/pub" target="_blank" rel="noopener">"Single Table Queries" Transcript</a>)</p>
+    <h3>The SELECT Statement</h3>
+    <p>As you have learned, the SELECT statement is used to retrieve data from a database. Now you will study the clauses that make up SELECT statement.</p>
+    <h4>5 Clauses of the SELECT Statement</h4>
+    <table>
+      <tbody><tr>
+        <td>SELECT</td>
+        <td>Lists the columns in the result set</td>
+      </tr>
+      <tr>
+        <td>FROM</td>
+        <td>Specifies the table from where the data will be retrieved</td>
+      </tr>
+      <tr><td>WHERE</td>
+      <td>Filters the rows to only those that match the condition </td>
+      </tr>
+      <tr>
+        <td>ORDER BY</td>
+        <td>Specifies how to sort the rows</td>
+      </tr>
+      <tr>
+        <td>LIMIT</td>
+        <td>The number of rows to return</td>
+      </tr>
+    </tbody></table>
+    <div class="callout info"><strong>SELECT and FROM Statements</strong>
+      <p>The SELECT statement is used to retrieve data from a table. The SELECT clause lists the columns you want as part of the resulting data, or result set. The FROM clause tells what table you are getting the data or columns from.</p>
+    </div>
+    <h4>The SELECT Statement Syntax</h4>
+    <p class="callout info">SELECT column_list <br> [FROM table_source]</p>
+    <p>There are 4 ways to code the column list in the SELECT statement.</p>
+    <h5>1. All columns with an asterisk</h5>
+    <pre><code class="code sql hljs language-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> 
+<span class="hljs-keyword">FROM</span> products</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_id</th>
+        <th>prod_name</th>
+        <th>prod_category</th>
+        <th>prod_price</th>
+      </tr>
+      <tr>
+        <td>t12</td>
+        <td> bouncy ball </td>
+        <td>toy </td>
+        <td>2.99</td>
+      </tr>
+      <tr>
+        <td>t15</td>
+        <td> jacks </td>
+        <td>toy </td>
+        <td> 3.99</td>
+      </tr>
+      <tr>
+        <td>t18</td>
+        <td> doll </td>
+        <td>toy </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>t21</td>
+        <td> top </td>
+        <td>toy </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>s10</td>
+        <td> jump rope </td>
+        <td>null </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>s13</td>
+        <td> hockey puck </td>
+        <td>sports </td>
+        <td>1.99</td>
+      </tr>
+      <tr>
+        <td>s17</td>
+        <td> mitt </td>
+        <td>sports </td>
+        <td>5.99</td>
+      </tr>
+      <tr>
+        <td>s22</td>
+        <td> bat </td>
+        <td>sports </td>
+        <td>2.99</td>
+      </tr>
+      <tr>
+        <td>s24</td>
+        <td> baseball </td>
+        <td>sports </td>
+        <td>1.99</td>
+      </tr>
+    </tbody></table>
+    <p>The wildcard asterisk (*) is a fast way to list all the columns of the table during development but should be avoided when writing queries for production. Retrieving unnecessary columns slows down performance. It's better to list only the columns
+      you need for a given query.</p>
+    <h5>2. By column name (each column separated with a comma)</h5>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name</th>
+        <th> prod_price</th>
+      </tr>
+      <tr>
+        <td>bouncy ball </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>jacks </td>
+        <td> 3.99</td>
+      </tr>
+      <tr>
+        <td>doll </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>top </td>
+        <td>1.99</td>
+      </tr>
+      <tr>
+        <td>jump rope </td>
+        <td>2.99</td>
+      </tr>
+      <tr>
+        <td>hockey puck </td>
+        <td>1.99</td>
+      </tr>
+      <tr>
+        <td>mitt </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>bat </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>baseball </td>
+        <td> 1.99</td>
+      </tr>
+    </tbody></table>
+    <h5>3. Columns created with calculations</h5>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price <span class="hljs-operator">+</span> <span class="hljs-number">2.00</span> 
+<span class="hljs-keyword">FROM</span> products</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name</th>
+        <th>prod_price + 2.00</th>
+      </tr>
+      <tr>
+        <td>bouncy ball </td>
+        <td>4.99</td>
+      </tr>
+      <tr>
+        <td>jacks </td>
+        <td>5.99</td>
+      </tr>
+      <tr>
+        <td>doll </td>
+        <td>7.99</td>
+      </tr>
+      <tr>
+        <td>top </td>
+        <td>3.99</td>
+      </tr>
+      <tr>
+        <td>jump rope </td>
+        <td>4.99</td>
+      </tr>
+      <tr>
+        <td>hockey puck </td>
+        <td>3.99</td>
+      </tr>
+      <tr>
+        <td>mitt </td>
+        <td>7.99</td>
+      </tr>
+      <tr>
+        <td>bat </td>
+        <td>4.99</td>
+      </tr>
+      <tr>
+        <td>baseball </td>
+        <td>3.99</td>
+      </tr>
+    </tbody></table>
+    <p>By default, the result set column header is the same name as the column, calculation or function. Notice 'prod_price + 2.00' is the column header for the calculated column. You can rename a column to clarify the data in that column in the result
+      set. The AS keyword allows you to rename the column. This is known as an alias. The string following the AS keyword replaces the column name, calculation or function. If there are spaces in the alias string you need to place quotes around it.</p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price <span class="hljs-operator">+</span> <span class="hljs-number">2.00</span> <span class="hljs-keyword">AS</span> <span class="hljs-string">'Markup Price'</span>
+<span class="hljs-keyword">FROM</span> products</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th>Markup Price</th>
+      </tr>
+      <tr>
+        <td>bouncy ball </td>
+        <td>4.99</td>
+      </tr>
+      <tr>
+        <td>jacks </td>
+        <td>5.99</td>
+      </tr>
+      <tr>
+        <td>doll </td>
+        <td>7.99</td>
+      </tr>
+      <tr>
+        <td>top </td>
+        <td>3.99</td>
+      </tr>
+      <tr>
+        <td>jump rope </td>
+        <td>4.99</td>
+      </tr>
+      <tr>
+        <td>hockey puck </td>
+        <td>3.99</td>
+      </tr>
+      <tr>
+        <td>mitt </td>
+        <td>7.99</td>
+      </tr>
+      <tr>
+        <td>bat </td>
+        <td>4.99</td>
+      </tr>
+      <tr>
+        <td>baseball </td>
+        <td>3.99</td>
+      </tr>
+    </tbody></table>
+    <p>When making calculations in the SELECT statement, you can use any of the following arithmetic operators:</p>
+<div class="callout info">    <pre>*  Multiplication		
+/  Division		
+%  Modulus		
++  Addition
+-  Subtraction </pre></div>
+    <p>If more than one arithmetic operator is used they follow the order of precedence as they are listed in the table above.</p>
+    <h5>4. Columns created with functions</h5>
+    <p>Functions are not covered until a later lesson, but are mentioned here only to demonstrate that you can use functions in the SELECT statement.</p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, ROUND(prod_price) <span class="hljs-keyword">AS</span> nearest_dollar
+<span class="hljs-keyword">FROM</span> products</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name</th>
+        <th>nearest_dollar</th>
+      </tr>
+      <tr>
+        <td>bouncy ball</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>jacks</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>doll</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>top</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>jump rope</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>hockey puck</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>mitt</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>bat</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>baseball</td>
+        <td>4</td>
+      </tr>
+    </tbody></table>
+    <p>The SELECT statement uses the ROUND function with price as the parameter to round the price to the nearest dollar. The alias is the string 'nearest_dollar'.</p>
+    <p>The DISTINCT keyword can be used with SELECT to eliminate duplicate rows in a result set. For example without the DISTINCT keyword this SELECT statement results in all prices of each product listed.</p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_price
+<span class="hljs-keyword">FROM</span> products</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_price</th>
+      </tr>
+      <tr>
+        <td>2.99</td>
+      </tr>
+      <tr>
+        <td>3.99</td>
+      </tr>
+      <tr>
+        <td>5.99</td>
+      </tr>
+      <tr>
+        <td>1.99</td>
+      </tr>
+      <tr>
+        <td>2.99</td>
+      </tr>
+      <tr>
+        <td>1.99</td>
+      </tr>
+      <tr>
+        <td>5.99</td>
+      </tr>
+      <tr>
+        <td>2.99</td>
+      </tr>
+      <tr>
+        <td>1.99</td>
+      </tr>
+    </tbody></table>
+    <p>With the DISTINCT keyword all duplicate prices are eliminated.</p>
+    <pre>      <code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span>(prod_price)
+<span class="hljs-keyword">FROM</span> products</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_price</th>
+      </tr>
+      <tr>
+        <td>2.99</td>
+      </tr>
+      <tr>
+        <td>3.99</td>
+      </tr>
+      <tr>
+        <td>5.99</td>
+      </tr>
+      <tr>
+        <td>1.99</td>
+      </tr>
+    </tbody></table>
+    <h3>The WHERE Clause</h3>
+    <p>The WHERE clause lets you retrieve just the rows you want. So only part of the table or column data shows up in the result set depending on the criteria in your WHERE clause. The WHERE clause filters the data.</p>
+    <h4>The SELECT Statement Syntax with WHERE:</h4>
+    <p><strong>SELECT select_list<br> [FROM table_source]<br> [WHERE search_conditions]<br></strong></p>
+    <div class="callout info">
+      <p>You can use comparison operators to restrict information in the result set. </p>
+      <pre>       =	   	   Equal to
+       &lt;		   Less than
+       &lt;=		   Less than or equal to
+       &gt; 		   Greater than
+       &gt;= 		   Greater than or equal to
+       &lt;&gt; or !=	   Not equal to
+      </pre>
+    </div>
+    <p>If you wanted to restrict your result set to only those products that have a price greater than $5.00, you could use this WHERE clause.</p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products
+<span class="hljs-keyword">WHERE</span> prod_price <span class="hljs-operator">&gt;</span> <span class="hljs-number">5.00</span> </code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name</th>
+        <th> prod_price</th>
+      </tr>
+      <tr>
+        <td>doll </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>mitt </td>
+        <td> 5.99</td>
+      </tr>
+    </tbody></table>
+    <p>Or those products priced less than or equal to 2.99.</p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products
+<span class="hljs-keyword">WHERE</span> prod_price <span class="hljs-operator">&lt;=</span> <span class="hljs-number">2.99</span> </code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th>prod_price</th>
+      </tr>
+      <tr>
+        <td>bouncy ball </td>
+        <td>2.99</td>
+      </tr>
+      <tr>
+        <td>top </td>
+        <td>1.99</td>
+      </tr>
+      <tr>
+        <td>jump rope </td>
+        <td>2.99</td>
+      </tr>
+      <tr>
+        <td>hockey puck </td>
+        <td>1.99</td>
+      </tr>
+      <tr>
+        <td>bat </td>
+        <td>2.99</td>
+      </tr>
+      <tr>
+        <td>baseball </td>
+        <td>1.99</td>
+      </tr>
+    </tbody></table>
+    <p>Or those products that are not priced equal to 2.99.</p>
+    <pre>      <code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products
+<span class="hljs-keyword">WHERE</span> prod_price <span class="hljs-operator">&lt;&gt;</span> <span class="hljs-number">2.99</span></code> </pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th>prod_price</th>
+      </tr>
+      <tr>
+        <td>jacks </td>
+        <td>3.99</td>
+      </tr>
+      <tr>
+        <td>doll </td>
+        <td>5.99</td>
+      </tr>
+      <tr>
+        <td>top </td>
+        <td>1.99</td>
+      </tr>
+      <tr>
+        <td>hockey puck </td>
+        <td>1.99</td>
+      </tr>
+      <tr>
+        <td>mitt </td>
+        <td>5.99</td>
+      </tr>
+      <tr>
+        <td>baseball </td>
+        <td>1.99</td>
+      </tr>
+    </tbody></table>
+    <p>You can also use multiple conditions with logical operators. Use AND and OR to combine two or more search conditions and NOT to negate a search condition.</p>
+    <div class="callout info">
+      <pre>AND    Both conditions have to be true for it to show up in the result set
+OR     One of the conditions has to be true for it to show up in the result set
+NOT    Negates the condition. </pre>
+    </div>
+    <p>If you write a WHERE clause with multiple conditions (or a compound condition), there is an order of precedence. First the NOT runs, then the AND, and then the OR. Use parenthesis to override this order of precedence.</p>
+    <p>Select all products and their price that have a price equal to 5.99 and also have the name of 'doll'. There are two products that are 5.99 but only one with the name doll. Both conditions have to be true for the result to show up.</p>
+    <pre>       <code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products
+<span class="hljs-keyword">WHERE</span> prod_price <span class="hljs-operator">=</span> <span class="hljs-number">5.99</span> <span class="hljs-keyword">AND</span> prod_name <span class="hljs-operator">=</span> <span class="hljs-string">'doll'</span></code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th>prod_price</th>
+      </tr>
+      <tr>
+        <td>doll </td>
+        <td>5.99</td>
+      </tr>
+    </tbody></table>
+    <p>Select all products and their price that have a price equal to 5.99 or has a name equal to 'bat'. We get both products that are equal to 5.99 and a product name equal to 'bat'. So either condition can be true for the result to show up.</p>
+    <pre>       <code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products
+<span class="hljs-keyword">WHERE</span> prod_price <span class="hljs-operator">=</span> <span class="hljs-number">5.99</span> <span class="hljs-keyword">OR</span> prod_name <span class="hljs-operator">=</span> <span class="hljs-string">'bat'</span> </code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th>prod_price</th>
+      </tr>
+      <tr>
+        <td>doll </td>
+        <td>5.99</td>
+      </tr>
+      <tr>
+        <td>mitt </td>
+        <td>5.99</td>
+      </tr>
+      <tr>
+        <td>bat </td>
+        <td>2.99</td>
+      </tr>
+    </tbody></table>
+    <p>Select all products and their price that do not have a price equal to 5.99. Reverses, or negates the condition and returns the opposite; all products with their prices that are not equal to 5.99.</p>
+    <pre>       <code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">NOT</span> prod_price <span class="hljs-operator">=</span> <span class="hljs-number">5.99</span> </code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th> prod_price</th>
+      </tr>
+      <tr>
+        <td>bouncy ball </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>jacks </td>
+        <td>3.99</td>
+      </tr>
+      <tr>
+        <td>top </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>jump rope </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>hockey puck </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>bat </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>baseball </td>
+        <td> 1.99</td>
+      </tr>
+    </tbody></table>
+    <p>The <strong>IN</strong> operator tests if an expression is in a list. </p>
+    <p>Select all products and their prices that have a price of 2.99, 1.99 or 5.99.</p>
+    <pre>       <code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products
+<span class="hljs-keyword">WHERE</span> prod_price <span class="hljs-keyword">IN</span> (<span class="hljs-number">2.99</span>, <span class="hljs-number">1.99</span>, <span class="hljs-number">5.99</span>)</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th> prod_price</th>
+      </tr>
+      <tr>
+        <td>bouncy ball </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>doll </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>top </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>jump rope </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>hockey puck </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>mitt </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>bat </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>baseball </td>
+        <td> 1.99</td>
+      </tr>
+    </tbody></table>
+    <p>The <strong>BETWEEN</strong> operator compares an expression with a range of values. Select all products and their prices that have a price ranging between 1.99 and 3.99. It is inclusive and would also include 1.99 and 3.99.</p>
+    <pre>       <code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price 
+<span class="hljs-keyword">FROM</span> products 
+<span class="hljs-keyword">WHERE</span> prod_price <span class="hljs-keyword">BETWEEN</span> <span class="hljs-number">1.99</span> <span class="hljs-keyword">AND</span> <span class="hljs-number">3.99</span></code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th> prod_price</th>
+      </tr>
+      <tr>
+        <td>bouncy ball </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>jacks </td>
+        <td> 3.99</td>
+      </tr>
+      <tr>
+        <td>top </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>jump rope </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>hockey puck </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>bat </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>baseball </td>
+        <td> 1.99</td>
+      </tr>
+    </tbody></table>
+    <p>The <strong>LIKE</strong> operator matches a string pattern to an expression. It uses two characters to represent characters. The _ underscore is a wild card to one character and the % percent is a wild card to any number of characters.</p>
+    <p>Select all products and their price that begin with 'b' and have any number of character after the 'b'.</p>
+    <pre>       <code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products
+<span class="hljs-keyword">WHERE</span> prod_name <span class="hljs-keyword">LIKE</span> <span class="hljs-string">'b%'</span> </code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th> prod_price</th>
+      </tr>
+      <tr>
+        <td>bouncy ball</td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>bat </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>baseball </td>
+        <td> 1.99</td>
+      </tr>
+    </tbody></table>
+    <p>Select all products and their price that end with 'll' and have any number of characters before the 'll'.</p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products
+<span class="hljs-keyword">WHERE</span> prod_name <span class="hljs-keyword">LIKE</span> <span class="hljs-string">'%ll'</span> </code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th> prod_price</th>
+      </tr>
+      <tr>
+        <td>bouncy ball</td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>doll </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>baseball </td>
+        <td> 1.99</td>
+      </tr>
+    </tbody></table>
+    <p>Select all products and their price that have one character before an 'o' and any number of characters after the 'o'.</p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products
+<span class="hljs-keyword">WHERE</span> prod_name <span class="hljs-keyword">LIKE</span> <span class="hljs-string">'_o%'</span> </code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th> prod_price</th>
+      </tr>
+      <tr>
+        <td>bouncy ball</td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>doll </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>top </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>hockey puck </td>
+        <td> 1.99</td>
+      </tr>
+    </tbody></table>
+    <p>The REGEXP operator allows much more complex string patterns to test expressions. Regular Expressions have many different symbols and are beyond the scope of this course, but here is an example.</p>
+    <p>In this example the <strong>|</strong> bar pattern represents 'matching any of the patterns'. So only product names that have a 'ck' or an 'all' string within them will show up. </p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products
+<span class="hljs-keyword">WHERE</span> prod_name REGEXP <span class="hljs-string">'ck|all'</span>;</code> </pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th> prod_price</th>
+      </tr>
+      <tr>
+        <td>bouncy ball</td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>jacks </td>
+        <td> 3.99</td>
+      </tr>
+      <tr>
+        <td>hockey puck </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>baseball </td>
+        <td> 1.99</td>
+      </tr>
+    </tbody></table>
+    <h3>There are other patterns like:</h3>
+    <div class="callout info">
+      <pre>^      matches the beginning of a string
+$      matches the end of a string
+[']    any character inside the square brackets
+p1|p2  matches any of the patterns p1 or p2 </pre>
+    </div>
+    <p>A NULL value is when a value has been left blank when a row or record is added. It is different from a zero value or a field that contains spaces.
+    </p><p>The <strong>IS NULL</strong> or <strong>IS NOT NULL</strong> will find all nulls or all values that are not null. We only had one null in our table; the product category of the jump rope row.</p>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_id </th>
+        <th>prod_name </th>
+        <th> prod_category </th>
+        <th>prod_price</th>
+      </tr>
+      <tr>
+        <td>t12 </td>
+        <td> bouncy ball </td>
+        <td> toy </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>t15 </td>
+        <td> jacks </td>
+        <td> toy </td>
+        <td> 3.99</td>
+      </tr>
+      <tr>
+        <td>t18 </td>
+        <td> doll </td>
+        <td> toy </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>t21 </td>
+        <td> top </td>
+        <td>toy </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>s10 </td>
+        <td> jump rope </td>
+        <td> null </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>s13 </td>
+        <td> hockey puck </td>
+        <td> sports</td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>s17 </td>
+        <td> mitt </td>
+        <td> sports </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>s22 </td>
+        <td> bat </td>
+        <td>sports </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>s24 </td>
+        <td> baseball </td>
+        <td> sports</td>
+        <td> 1.99</td>
+      </tr>
+    </tbody></table>
+    <div class="callout error">
+      <p>Because NULLs are not values (they have no value), it is not possible to use comparison operators (=, &lt; or&gt;) with NULL.</p>
+    </div>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products
+<span class="hljs-keyword">WHERE</span> prod_category <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NULL</span></code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th> prod_price</th>
+      </tr>
+      <tr>
+        <td>jump rope</td>
+        <td> 2.99</td>
+      </tr>
+    </tbody></table>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+       <span class="hljs-keyword">FROM</span> products
+       <span class="hljs-keyword">WHERE</span> prod_category <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>
+      </code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th> prod_price</th>
+      </tr>
+      <tr>
+        <td>bouncy ball</td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>jacks </td>
+        <td> 3.99</td>
+      </tr>
+      <tr>
+        <td>doll </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>top </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>hockey puck </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>mitt </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>bat </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>baseball </td>
+        <td> 1.99</td>
+      </tr>
+    </tbody></table>
+    <p>The <strong>ORDER BY </strong>clause will sort your result set. You can specify one or more column names to sort the result set.</p>
+    <h4>The SELECT Statement Syntax with ORDER BY:</h4>
+    <div class="callout info">
+      SELECT select_list<br> [FROM table_source]<br> [WHERE search_conditions]<br> [ORDER BY order_by_list]<br>
+    </div>
+    <p>With this ORDER BY the result set is sorted alphabetically by product name.</p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products
+<span class="hljs-keyword">WHERE</span> prod_price <span class="hljs-operator">&gt;</span> <span class="hljs-number">1.99</span>
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> prod_name</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th>prod_price</th>
+      </tr>
+      <tr>
+        <td>bat </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>bouncy ball</td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>doll </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>jacks </td>
+        <td> 3.99</td>
+      </tr>
+      <tr>
+        <td>jump rope </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>mitt </td>
+        <td> 5.99</td>
+      </tr>
+    </tbody></table>
+    <p>With this ORDER BY the result set is sorted numerically by product price.</p>
+    <pre><code clas="sql" class="hljs language-vbnet"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> prod_price</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th>prod_price</th>
+      </tr>
+      <tr>
+        <td>top </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>hockey puck </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>baseball</td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>jump rope </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>bat </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>jacks </td>
+        <td> 3.99</td>
+      </tr>
+      <tr>
+        <td>doll </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>mitt </td>
+        <td> 5.99</td>
+      </tr>
+    </tbody></table>
+    <p>With this ORDER BY the result set is sorted numerically by product price then within the product price it is also sorted by product name.</p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> prod_price, prod_name</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th>prod_price</th>
+      </tr>
+      <tr>
+        <td>baseball</td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>hockey puck </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>top </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>bat </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>bouncy ball </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>jump rope </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>jacks </td>
+        <td> 3.99</td>
+      </tr>
+      <tr>
+        <td>doll </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>mitt </td>
+        <td> 5.99</td>
+      </tr>
+    </tbody></table>
+    <p>You can reverse the sort from the default ascending (ASC) to descending using the keyword <strong>DESC</strong>. The keyword is assumed unless DESC is used. Now the prices are sorted from largest price to smallest price.</p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> prod_price <span class="hljs-keyword">DESC</span></code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th> prod_price</th>
+      </tr>
+      <tr>
+        <td>mitt </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>doll </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>jacks </td>
+        <td> 3.99</td>
+      </tr>
+      <tr>
+        <td>bat </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>jump rope </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>bouncy ball </td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>baseball </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>hockey puck </td>
+        <td> 1.99</td>
+      </tr>
+      <tr>
+        <td>top </td>
+        <td> 1.99</td>
+      </tr>
+    </tbody></table>
+    <p>The <strong>LIMIT</strong> clause specifies the maximum number of rows that will be returned.</p>
+    <h4>The SELECT Statement Syntax with LIMIT:</h4>
+    <div class="callout info">
+      SELECT select_list<br> [FROM table_source]<br> [WHERE search_conditions]<br> [ORDER BY order_by_list]<br> [LIMIT row_limit]<br>
+    </div>
+    <p>In this statement, the result set is limited to 4 rows, even though there are 9 products in the table that would have been a part of the result set if there were no LIMIT clause.</p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price
+<span class="hljs-keyword">FROM</span> products
+LIMIT <span class="hljs-number">4</span></code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th> prod_price</th>
+      </tr>
+      <tr>
+        <td>bouncy ball</td>
+        <td> 2.99</td>
+      </tr>
+      <tr>
+        <td>jacks </td>
+        <td> 3.99</td>
+      </tr>
+      <tr>
+        <td>doll </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>top </td>
+        <td> 1.99</td>
+      </tr>
+    </tbody></table>
+    <div class="callout warning">
+      <p>Remember we have to type the clauses in a specific order. SELECT, then FROM, then WHERE, then ORDER BY, and then LIMIT</p>
+    </div>
+    <strong>This is the order of how you must write a select query.</strong>
+    <div class="callout info">
+      SELECT <br> FROM <br> WHERE <br> ORDER BY <br> LIMIT <br>
+    </div><br>
+    <strong>But the order in which the computer actually executes the clauses is different. This is referred to as the Order of Execution.</strong>
+    <div class="callout info">
+      FROM<br> WHERE
+      <br> SELECT
+      <br> ORDER BY<br> LIMIT
+      <br>
+    </div>
+    <p>The data from the entire table is retrieved, then that is filtered by the WHERE criteria. The columns, calculations, or functions that will show up are determined in SELECT. Then that resulting data is sorted and then limited.</p>
+    <p>The order of execution is why an alias that was set up in the SELECT clause can be used in an ORDER BY but not a WHERE.</p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> prod_name, prod_price <span class="hljs-operator">+</span> <span class="hljs-number">2.00</span> <span class="hljs-keyword">AS</span> mark_up
+<span class="hljs-keyword">FROM</span> products
+<span class="hljs-keyword">WHERE</span> prod_price <span class="hljs-operator">&gt;</span> <span class="hljs-number">1.99</span>
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> mark_up</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>prod_name </th>
+        <th> mark_up</th>
+      </tr>
+      <tr>
+        <td>bouncy ball</td>
+        <td> 4.99</td>
+      </tr>
+      <tr>
+        <td>jump rope</td>
+        <td> 4.99</td>
+      </tr>
+      <tr>
+        <td>bat</td>
+        <td> 4.99</td>
+      </tr>
+      <tr>
+        <td>jacks </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>doll </td>
+        <td> 5.99</td>
+      </tr>
+      <tr>
+        <td>mitt </td>
+        <td> 7.99</td>
+      </tr>
+    </tbody></table>
+    <h3>Watch the functions video:</h3>
+    <figure class="video-container"><iframe title="YouTube video player" src="./ITM 111 _ Project_files/NU97CPGRPkU.html" width="560" height="315" allowfullscreen="allowfullscreen" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></figure>
+    <p>(11:36 mins, "<a class="inline_disabled" href="https://docs.google.com/document/d/e/2PACX-1vQIFJLvlnqWkYpLSvKztPPcRahAKGyzOdg74uT3aRJVykbzUE3HBXtiGDUB-__dMErK9uP0er5e43qm/pub" target="_blank" rel="noopener">Functions" transcript</a>)</p>
+    <p><a href="https://cit111byui.github.io/transcripts/w08_functions_transcript.pdf" target="_blank" rel="noopener"></a></p>
+    <h3>Using Functions</h3>
+    <p>In MySQL, a function is a stored program, or operation that when performed on data will returns a value or manipulate or covert the data. This allows us to perform manipulations on the data before retrieving or saving it. Functions have a name that you refer to and can also accept one or more parameters that can be passed into the function. </p>
+    <div class="callout info">
+      function name&gt;(parameter1, parameter2, ...)
+    </div>
+    <p>
+      In this lesson, we will be looking at scalar functions that operate on the individual rows of a table. Scalar means the function will work on a single entity of data, not a group of data together. So if the function is used with a table with many rows the function will work on each single value or entity of data in each row.
+    </p><h3>Types of Functions:</h3>
+    <table>
+      <tbody><tr>
+        <td>Text</td>
+        <td>used to manipulate strings of text</td>
+      </tr>
+      <tr>
+        <td>Numeric</td>
+        <td>used to perform mathematical operations on numeric data</td>
+      </tr>
+      <tr>
+        <td>Date &amp; Time</td>
+        <td>used to manipulate data and time values and to extract specific components</td>
+      </tr>
+      <tr>
+        <td>System</td>
+        <td>returns information specific to the DBMS being used</td>
+      </tr>
+    </tbody></table>
+    <p>
+      We will be going over some of the more common text, numeric, and date &amp; time functions.
+    </p>
+    <h3>Commonly used Text-manipulation or String Functions</h3>
+    <table>
+      <tbody><tr>
+        <th>Function
+        </th><th>Description
+      </th></tr>
+      <tr>
+        <td>CONCAT(string, string)</td>
+        <td>Returns all the string combined into one string</td>
+      </tr>
+      <tr>
+        <td>LEFT(string, length)</td>
+        <td>Returns characters from the left of the string</td>
+      </tr>
+      <tr>
+        <td>RIGHT(string, length)</td>
+        <td>Returns characters from the right of the string</td>
+      </tr>
+      <tr>
+        <td>LTRIM(string)</td>
+        <td>Trims white space from the left of the string</td>
+      </tr>
+      <tr>
+        <td>RTRIM(string)</td>
+        <td>Trims white space from the right of the string</td>
+      </tr>
+      <tr>
+        <td>TRIM( string)</td>
+        <td>Trims white space from the left and right of the string</td>
+      </tr>
+      <tr>
+        <td>LENGTH(string) </td>
+        <td>Returns the length of characters of the string</td>
+      </tr>
+      <tr>
+        <td>LOWER(string)</td>
+        <td>Converts the string to lowercase</td>
+      </tr>
+      <tr>
+        <td>UPPER(string)</td>
+        <td>Converts the string to uppercase</td>
+      </tr>
+      <tr>
+        <td>LOCATE(find, search, start)</td>
+        <td>Find a substring within the string</td>
+      </tr>
+      <tr>
+        <td>SUBSTRING(string, start, length )</td>
+        <td>Return characters from within a string</td>
+      </tr>
+    </tbody></table>
+    <p>
+      Let's use the keyword table to demonstrate some of the functions.
+    </p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> keyword</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>keyword_id</th>
+        <th>keyword</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>sky</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>landscape</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>people</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>nature</td>
+      </tr>
+    </tbody></table>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> CONCAT(<span class="hljs-string">'The primary key of  '</span>, keyword, <span class="hljs-string">' is '</span>, keyword_id) <span class="hljs-keyword">AS</span> new_string, 
+<span class="hljs-keyword">FROM</span> keyword
+<span class="hljs-keyword">WHERE</span> keyword_id <span class="hljs-operator">=</span> <span class="hljs-number">1</span></code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>new_string</th>
+      </tr>
+      <tr>
+        <td>The primary key of sky is 1</td>
+      </tr>
+    </tbody></table>
+    <p>
+      The result is made up of string literals inside quotes and column values all combined into one new string.
+    </p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span>  <span class="hljs-keyword">LEFT</span>(keyword, <span class="hljs-number">4</span>), LENGTH(keyword), <span class="hljs-built_in">UPPER</span>(keyword)
+<span class="hljs-keyword">FROM</span> key
+<span class="hljs-keyword">WHERE</span> keyword_id <span class="hljs-operator">=</span> <span class="hljs-number">2</span></code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>LEFT(keyword, 4)</th>
+        <th>LENGTH(keyword)</th>
+        <th>UPPER(keyword)</th>
+      </tr>
+      <tr>
+        <td>land</td>
+        <td>9</td>
+        <td>LANDSCAPE</td>
+      </tr>
+    </tbody></table>
+    <p>
+      The first column takes the string 'landscape' and returns 4 characters from the left.<br>
+      The second column adds up all the characters in the string 'landscape'<br>
+      The third column converts all the letters in the string 'landscape' to upper case.
+    </p>
+    <p>Index numbering of the characters in the string 'landscape'</p>
+    <table>
+      <tbody><tr>
+        <td>l</td>
+        <td>a</td>
+        <td>n</td>
+        <td>d</td>
+        <td>s</td>
+        <td>c</td>
+        <td>a</td>
+        <td>p</td>
+        <td>e</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </tbody></table>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> LOCATE( <span class="hljs-string">'and'</span>, keyword), <span class="hljs-built_in">SUBSTRING</span>(keyword, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>), <span class="hljs-built_in">SUBSTRING</span>(keyword, <span class="hljs-number">7</span>)
+<span class="hljs-keyword">FROM</span> key
+<span class="hljs-keyword">WHERE</span> keyword_id  <span class="hljs-operator">=</span> <span class="hljs-number">2</span></code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>LOCATE('and', keyword)</th>
+        <th>SUBSTRING(keyword, 1, 5)</th>
+        <th>SUBSTRING(keyword, 7)</th>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>lands</td>
+        <td>ape</td>
+      </tr>
+    </tbody></table>
+    <p>
+      The first column searches for the substring 'and' inside of the string 'landscape' and returns the index number of where it was found. the 2nd character in is where the 'a' in 'and' starts.<br>
+      The second column starts at the first character and returns all character from there to the fifth character.<br>
+      The third column starts at the seventh character and returns the rest of the string from there.
+    </p>
+    <br><br>
+    <h3>Commonly used Numeric Functions</h3>
+    <table>
+      <tbody><tr>
+        <th>Function
+        </th><th>Description
+      </th></tr>
+      <tr>
+        <td>ROUND(number, length)</td>
+        <td>Returns the number rounded </td>
+      </tr>
+      <tr>
+        <td>FLOOR(number)</td>
+        <td>Returns the next smaller whole number</td>
+      </tr>
+      <tr>
+        <td>CEILING(number)</td>
+        <td>Returns the next larger whole number</td>
+      </tr>
+      <tr>
+        <td>ABS(number)</td>
+        <td>Returns the absolute value of the number</td>
+      </tr>
+      <tr>
+        <td>SQRT(number)</td>
+        <td>Returns the square root of the number</td>
+      </tr>
+      <tr>
+        <td>MOD(number, divisor)</td>
+        <td>Returns the remainder of the number divided by the divisor</td>
+      </tr>
+      <tr>
+        <td>FORMAT(number, decimals, locale)</td>
+        <td>Returns the number is currency format</td>
+      </tr>
+    </tbody></table>
+    <p>
+      Lets use the magazine table to demonstrate some of the numeric functions
+    </p>
+    <pre><code class="language-sql hljs"> <span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> magazine</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>magKey</th>
+        <th>magName</th>
+        <th>magPrice</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Fishing in the Mojave</td>
+        <td>13.95</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Car Racing Made Easy</td>
+        <td>15.45</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Pine Cone Computing</td>
+        <td>17.50</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Cooking Like Mad</td>
+        <td>18.00</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>If Only I Could Sing</td>
+        <td>25.00</td>
+      </tr>
+    </tbody></table>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> ROUND(magPrice), ROUND(magPrice, <span class="hljs-number">1</span>)
+<span class="hljs-keyword">FROM</span> magazine</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>ROUND(magPrice)</th>
+        <th>ROUND(magPrice,1)</th>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>14.0</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>15.5</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>17.5</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>18.0</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>25.0</td>
+      </tr>
+    </tbody></table>
+    <p>
+      The first column rounds to the nearest whole number.<br>
+      The second column rounds to one decimal place.
+    </p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> magPrice, <span class="hljs-built_in">FLOOR</span>(magPrice), <span class="hljs-built_in">CEILING</span>(magPrice)
+<span class="hljs-keyword">FROM</span> magazine</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>magPrice</th>
+        <th>FLOOR(magPrice)</th>
+        <th>CEILING(magPrice)</th>
+      </tr>
+      <tr>
+        <td>13.95</td>
+        <td>13</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>15.45</td>
+        <td>15</td>
+        <td>16</td>
+      </tr>
+      <tr>
+        <td>17.50</td>
+        <td>17</td>
+        <td>18</td>
+      </tr>
+      <tr>
+        <td>18.00</td>
+        <td>18</td>
+        <td>18</td>
+      </tr>
+      <tr>
+        <td>25.00</td>
+        <td>25</td>
+        <td>25</td>
+      </tr>
+    </tbody></table>
+    <p>
+      The number 13.95 has the next lower whole number of 13 and next larger whole number of 14.<br>
+      The number 15.45 has the next lower whole number of 15 and the next larger whole number of 16.<br>
+      The number 17.50 has the next lower whole number of 17 and the next larger whole number of 18.<br>
+      The number 18.00 has the next lower whole number of 18 and the next larger whole number of 18.<br>
+      The number 25.00 has the next lower whole number of 25 and the next larger whole number of 25.
+    </p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">SQRT</span>(magPrice)
+<span class="hljs-keyword">FROM</span> magazine
+<span class="hljs-keyword">WHERE</span> magKey <span class="hljs-operator">=</span> <span class="hljs-number">5</span></code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>SQRT(magPrice)</th>
+      </tr>
+      <tr>
+        <td>5</td>
+      </tr>
+    </tbody></table>
+    <p> The square root of 25 is 5.
+    </p>
+    <p>
+      If you wanted to manipulate your magazine prices to look more like currency you can use the FORMAT function. The first parameter is the number, the second the decimal places and the third is the locale which determines the thousands separator. Ours will be 'en_US' to show US English formatting. 10,000 dollars will be added to each magazine price so we can see the commas placed at each thousands grouping. The CONCAT function will also be used to add the '$' dollar sign to the number. </p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> CONCAT(<span class="hljs-string">'$'</span>, FORMAT(magPrice <span class="hljs-operator">+</span> <span class="hljs-number">10000</span>, <span class="hljs-number">2</span>, <span class="hljs-string">'en_US'</span>)) 
+<span class="hljs-keyword">FROM</span> magazine</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>CONCAT('$', FORMAT(magPrice + 10000, 2, 'en_US'))</th>
+      </tr>
+      <tr>
+        <td>$10,013.95</td>
+      </tr>
+      <tr>
+        <td>$10,015.45</td>
+      </tr>
+      <tr>
+        <td>$10,017.50</td>
+      </tr>
+      <tr>
+        <td>$10,018.00</td>
+      </tr>
+      <tr>
+        <td>$10,025.00</td>
+      </tr>
+    </tbody></table>
+    <h4>Commonly used Date and Time Functions</h4>
+    <table>
+      <tbody><tr>
+        <th>Function
+        </th><th>Description
+      </th></tr>
+      <tr>
+        <td>YEAR(date)</td>
+        <td>Returns the year portion of a date</td>
+      </tr>
+      <tr>
+        <td>MONTH(date)</td>
+        <td>Returns the month portion of a date</td>
+      </tr>
+      <tr>
+        <td>DAY(date)</td>
+        <td>Returns the day portion of a date</td>
+      </tr>
+      <tr>
+        <td>HOUR(time) </td>
+        <td>Returns the hour portion of a time</td>
+      </tr>
+      <tr>
+        <td>MINUTE(time)</td>
+        <td>Returns the minute portion of a time</td>
+      </tr>
+      <tr>
+        <td>SECOND(time)</td>
+        <td>Returns the second portion of a time</td>
+      </tr>
+      <tr>
+        <td>NOW()</td>
+        <td>Returns the current local time and date from your system</td>
+      </tr>
+      <tr>
+        <td>DATE_ADD(date, INTERVAL length time)</td>
+        <td>Adds a specified interval to a date</td>
+      </tr>
+      <tr>
+        <td>DATEDIFF(date, date)</td>
+        <td>Calculates the difference in days between two dates</td>
+      </tr>
+      <tr>
+        <td>DATE_FORMAT(date, format)</td>
+        <td>Returns a string for a date with specific formatting</td>
+      </tr>
+    </tbody></table>
+    <p>
+      Let's use the employee table to demonstrate some of the date and time functions.
+    </p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> employee</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>emp_id</th>
+        <th>emp_fname</th>
+        <th>emp_lname</th>
+        <th>hire_date</th>
+        <th>emp_email</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Jenny</td>
+        <td>Jensen</td>
+        <td>2013-06-15</td>
+        <td>jensenj@salon.com</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Haley</td>
+        <td>Lopez</td>
+        <td>2013-08-23</td>
+        <td>lopezh@salon.com</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Robert</td>
+        <td>Green</td>
+        <td>2014-01-03</td>
+        <td>greenr@salon.com</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Olive</td>
+        <td>Adams</td>
+        <td>2015-07-12</td>
+        <td>adamso@salon.com</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Julie</td>
+        <td>Davis</td>
+        <td>2015-10-20</td>
+        <td>davisj@salon.com</td>
+      </tr>
+    </tbody></table>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> hire_date, <span class="hljs-keyword">YEAR</span>(hire_date), <span class="hljs-keyword">MONTH</span>(hire_date) 
+<span class="hljs-keyword">FROM</span> employee</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>hire_date</th>
+        <th>YEAR(hire_date)</th>
+        <th>MONTH(hire_date)</th>
+      </tr>
+      <tr>
+        <td>2013-06-15</td>
+        <td>2013</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>2013-08-23</td>
+        <td>2013</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>2014-01-03</td>
+        <td>2014</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>2015-07-12</td>
+        <td>2015</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>2015-10-20</td>
+        <td>2015</td>
+        <td>10</td>
+      </tr>
+    </tbody></table>
+    <p>
+      The YEAR function takes the hire date and extracts only the year and the MONTH function only extracts out the month from the date. </p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> NOW()</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>NOW()</th>
+      </tr>
+      <tr>
+        <td>2020-12-28 13:26:17</td>
+      </tr>
+    </tbody></table>
+    <p>
+      The NOW function returns the systems current date. When you run this function it will be the current date and time of your system.
+    </p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> hire_date <span class="hljs-keyword">AS</span> Hire <span class="hljs-type">Date</span>, DATE_ADD(hire_date, <span class="hljs-type">INTERVAL</span> <span class="hljs-number">6</span> <span class="hljs-keyword">MONTH</span>) <span class="hljs-keyword">AS</span> <span class="hljs-string">'Six Months Later'</span>
+<span class="hljs-keyword">FROM</span> employee</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>Hire Date</th>
+        <th>Six Months Later</th>
+      </tr>
+      <tr>
+        <td>2013-06-15</td>
+        <td>2013-12-15</td>
+      </tr>
+      <tr>
+        <td>2013-08-23</td>
+        <td>2014-02-23</td>
+      </tr>
+      <tr>
+        <td>2014-01-03</td>
+        <td>2014-07-03</td>
+      </tr>
+      <tr>
+        <td>2015-07-12</td>
+        <td>2016-01-12</td>
+      </tr>
+      <tr>
+        <td>2015-10-20</td>
+        <td>2016-04-20</td>
+      </tr>
+    </tbody></table>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> DATEDIFF(hire_date, <span class="hljs-string">'2013-01-01'</span>) <span class="hljs-keyword">AS</span> <span class="hljs-string">'Days Between'</span>
+<span class="hljs-keyword">FROM</span> employee</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>Days Between</th>
+      </tr>
+      <tr>
+        <td>165</td>
+      </tr>
+      <tr>
+        <td>234</td>
+      </tr>
+      <tr>
+        <td>367</td>
+      </tr>
+      <tr>
+        <td>922</td>
+      </tr>
+      <tr>
+        <td>1022</td>
+      </tr>
+    </tbody></table>
+    <p>
+      This gives the difference in days between January 1st 2013 and the hire date. If you want years, you would need to divide it by 365.
+    </p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> DATEDIFF(hire_date, <span class="hljs-string">'2013-01-01'</span>) <span class="hljs-operator">/</span> <span class="hljs-number">365</span> <span class="hljs-keyword">AS</span> <span class="hljs-string">'Years Between'</span>
+<span class="hljs-keyword">FROM</span> employee</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>Years Between</th>
+      </tr>
+      <tr>
+        <td>0.4521</td>
+      </tr>
+      <tr>
+        <td>0.641</td>
+      </tr>
+      <tr>
+        <td>1.0055</td>
+      </tr>
+      <tr>
+        <td>2.5260</td>
+      </tr>
+      <tr>
+        <td>2.8000</td>
+      </tr>
+    </tbody></table>
+    <p>
+      The <strong>DATE_FORMAT</strong> function allows you to format the date so it isn't always in the format of yyyy-mm-dd.
+    </p>
+    <pre><code class="language-sql hljs"><span class="hljs-keyword">SELECT</span> hire_date, DATE_FORMAT(hire_date, <span class="hljs-string">'%M %D, %Y'</span>) <span class="hljs-keyword">AS</span> <span class="hljs-string">'hire date formatted'</span>
+<span class="hljs-keyword">FROM</span> employee</code></pre>
+    <table class="results">
+      <tbody><tr>
+        <th>hire_date</th>
+        <th>hire date formatted</th>
+      </tr>
+      <tr>
+        <td>2013-06-15</td>
+        <td>June 15th, 2013</td>
+      </tr>
+      <tr>
+        <td>2013-08-23</td>
+        <td>August 23rd, 2013</td>
+      </tr>
+      <tr>
+        <td>2014-01-03</td>
+        <td>January 3rd, 2014</td>
+      </tr>
+      <tr>
+        <td>2015-07-12</td>
+        <td>July 12th, 2015</td>
+      </tr>
+      <tr>
+        <td>2015-10-20</td>
+        <td>October 20th, 2015</td>
+      </tr>
+    </tbody></table>
+    <p>
+      The second parameter is a format string that includes codes for formatting the different parts of the date. Here are some of the common codes for formatting dates:
+    </p>
+    <table>
+      <tbody><tr>
+        <th>Format Code</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>%c</td>
+        <td>Month, numeric</td>
+      </tr>
+      <tr>
+        <td>%M</td>
+        <td>Month name</td>
+      </tr>
+      <tr>
+        <td>%e</td>
+        <td>Day of the month, numeric</td>
+      </tr>
+      <tr>
+        <td>%D</td>
+        <td>Day of the month with suffix</td>
+      </tr>
+      <tr>
+        <td>%y</td>
+        <td>Year, 2 digits</td>
+      </tr>
+      <tr>
+        <td>%Y</td>
+        <td>Year, 4 digits</td>
+      </tr>
+      <tr>
+        <td>%W</td>
+        <td>Weekday name</td>
+      </tr>
+    </tbody></table>
+    <p> There are also format codes for formatting times with the function TIME_FORMAT. But we won't be using any of those in this course.
+    </p>
+    <p> There are many more functions than we have not covered here, but for the depth of this course, these are the text, numeric, and date &amp; time functions we will be focusing on.
+    </p>
+    <h2>Submission</h2>
+    <p>Return to <a href="https://byupw.instructure.com/calendar#view_name=agenda" target="_blank">Canvas</a> and take the <strong>Week 03 Prepare Quiz</strong>.</p>
+    <h3>Submission</h3>
+    <p>Take the <strong>Week Prepare</strong> quiz in <a href="https://byupw.instructure.com/calendar#view_name=agenda" target="_blank">Canvas</a></p>
+    <p>You may use this <a href="https://quizlet.com/768599692/match/embed?i=4xh32d&amp;x=1jj1" target="_blank">quizlet</a> to help you study the terms.</p>
+    <h3>Useful Links:</h3>
+    <ul>
+        <li>Go to: <a href="https://byui-cse.github.io/itm111-ww-course/week04/index.html">Week Index</a> • <a href="https://byui-cse.github.io/itm111-ww-course/index.html">Course Home</a> • <a href="https://byupw.instructure.com/calendar#view_name=agenda" target="_blank">Canvas</a></li>
+    </ul>
+  </main>
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="./ITM 111 _ Project_files/highlight.min.js.download"></script>
+  <script src="./ITM 111 _ Project_files/sql.min.js.download" integrity="sha512-64D4TOespcFsS6vnnca/aON48/6XNG61BAtQj7WG+8qAZXclMfx92cXC7l56/FuHLNY9FeDvLPqVuT3x4AptgA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>hljs.highlightAll();</script>
+
+
+</body></html>
