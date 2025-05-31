@@ -21,6 +21,10 @@ header {
   align-items: center;
   text-align: center;
 }
+header p{
+  font-size: xx-large;
+  font-weight: bolder;
+}
 
 .logo-space {
   font-size: 1.5rem;
@@ -49,7 +53,7 @@ nav li {
 nav a {
   color: var(--primary-color);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: bolder;
   transition: color 0.3s ease;
   padding: 0.5rem 1rem;
 }

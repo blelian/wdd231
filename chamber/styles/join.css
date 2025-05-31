@@ -19,6 +19,10 @@ header {
     color: white;
     padding: 1rem;
 }
+header p{
+    font-size: xx-large;
+    font-weight: bolder;
+}
 
 .logo {
     width: 50px;
