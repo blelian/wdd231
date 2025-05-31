@@ -27,7 +27,17 @@
 <body>
     <header>
         <div class="logo-space">
-            <img src="images/commerce.webp" alt="Chamber Logo" class="logo" width="60" height="72" fetchpriority="high">
+            <img 
+  src="images/commerce.webp" 
+  alt="Chamber Logo" 
+  width="60" height="72" 
+  srcset="
+    images/commerce.webp 1x,
+    images/commerce@2x.webp 2x,
+    images/commerce@3x.webp 3x
+  " 
+  fetchpriority="high">
+
         </div>
         <p>Midlands Chamber of Commerce</p>
         <button id="menu-toggle">☰</button>
