@@ -13,6 +13,7 @@ document.querySelector('#results').innerHTML = `
         <li>Membership Level: ${myInfo.get('membership')}</li>
         <li>Business Description: ${myInfo.get('description')}</li>
     </ul>
+    <a href="./join.html" class="back-button">Back</a>
 `;
 
 document.getElementById("year").textContent = new Date().getFullYear();
