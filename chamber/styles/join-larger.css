@@ -25,6 +25,10 @@ header p{
   font-size: xx-large;
   font-weight: bolder;
 }
+h1{
+    font-size: xx-large;
+    font-weight: bolder;
+}
 
 .logo-space {
   font-size: 1.5rem;
