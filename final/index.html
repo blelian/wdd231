@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Blessing Mpofu, WDD231 student at BYU Idaho">
+  <meta name="description" content="Home page for Corlett Quality kitchens and home, an excellent way for home improvement.">
+  <meta property="og:title" content="WDD231 - Blessing Mpofu - Final Home Page">
+  <meta property="og:image" content="https://blelian.github.io/wdd231/chamber/images/commerce.webp">
+  <meta property="og:description" content="Explore our impressive range of quality designs.">
+  <meta property="og:url" content="https://blelian.github.io/wdd231/final/index.html">
+  <meta property="og:locale" content="en_US">
+  <link rel="icon" href="./images/corlett.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap">
+  </noscript>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/corlett.css" media="screen and (max-width: 600px)">
+  <link rel="stylesheet" href="styles/corlett-larger.css" media="screen and (min-width: 601px)">
+  <title>Home | Corlett Quality Kitchens and Home</title>
+  <script src="scripts/corlett.js" defer></script>
+  <script src="../scripts/date.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="branding">
+        <div class="logo-space">
+          <img 
+            src="images/commerce.webp" 
+            alt="Chamber Logo" 
+            width="60" height="72" 
+            srcset="
+              images/corlett.webp 1x,
+              images/corlett@2x.webp 2x,
+              images/corlett@3x.webp 3x
+            " 
+            fetchpriority="high">
+        </div>
+        <p>Corlett Quality Kitchens And Home</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero-gallery">
+    <div class="hero-gallery">
+      <div class="hero-text">
+        <h2>Transform Your Space</h2>
+        <p>Interior design that speaks to your soul.</p>
+        <a href="#contact" class="btn">Book a Consultation</a>
+      </div>
+
+      <div class="hero-image active" data-index="0">
+        <img src="images/hero-one.webp" alt="Hero Image 1">
+      </div>
+      <div class="hero-image" data-index="1">
+        <img src="./images/hero-two.webp" alt="Hero Image 2">
+      </div>
+      <div class="hero-image" data-index="2">
+        <img src="images/hero-three.webp" alt="Hero Image 3">
+      </div>
+      <div class="hero-image" data-index="3">
+        <img src="images/hero-four.webp" alt="Hero Image 4">
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="container">
+    <h2>About Us</h2>
+    <p>We are a creative design studio transforming homes into personalized sanctuaries. With years of experience and a passion for aesthetics, we deliver stunning results tailored to your needs.</p>
+  </section>
+
+  <section id="services" class="container">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Interior Design</h3>
+        <p>Customized design solutions tailored to reflect your style and functional needs.</p>
+      </div>
+      <div class="card">
+        <h3>Home Renovations</h3>
+        <p>Full-service remodeling including kitchens, bathrooms, and living spaces.</p>
+      </div>
+      <div class="card">
+        <h3>Furniture & Decor</h3>
+        <p>Handpicked pieces and decorative elements that complete your space with elegance.</p>
+      </div>
+      <div class="card">
+        <h3>Color Consultation</h3>
+        <p>Expert advice on color schemes to bring harmony and personality to every room.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="container">
+    <h2>Portfolio</h2>
+    <div class="grid">
+      <div class="image-placeholder">
+        <img src="images/kitchen-reno.webp" alt="Modern kitchen renovation">
+        <p>Modern Kitchen Renovation</p>
+      </div>
+      <div class="image-placeholder">
+        <img src="images/living-room.webp" alt="Contemporary living room design">
+        <p>Contemporary Living Room</p>
+      </div>
+      <div class="image-placeholder">
+        <img src="images/bedroom-makeover.webp" alt="Elegant bedroom makeover">
+        <p>Elegant Bedroom Makeover</p>
+      </div>
+      <div class="image-placeholder">
+        <img src="images/home-office.webp" alt="Home office setup">
+        <p>Functional Home Office Design</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+     <p>Blessing Mpofu | WDD 231</p>
+     <p>Corlett Quality Kitchens And Home | Johannesburg, South Africa | info@corlettqualty.org</p>
+    <p><span id="currentyear"></span></p>
+    <p><span id="lastmodified"></span></p>
+  </footer>
+</body>
+</html>
