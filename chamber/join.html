@@ -28,16 +28,15 @@
     <header>
         <div class="logo-space">
             <img 
-  src="images/commerce.webp" 
-  alt="Chamber Logo" 
-  width="60" height="72" 
-  srcset="
-    images/commerce.webp 1x,
-    images/commerce@2x.webp 2x,
-    images/commerce@3x.webp 3x
-  " 
-  fetchpriority="high">
-
+                src="images/commerce.webp" 
+                alt="Chamber Logo" 
+                width="60" height="72" 
+                srcset="
+                    images/commerce.webp 1x,
+                    images/commerce@2x.webp 2x,
+                    images/commerce@3x.webp 3x
+                " 
+                fetchpriority="high">
         </div>
         <p>Midlands Chamber of Commerce</p>
         <button id="menu-toggle">☰</button>
@@ -53,69 +52,71 @@
 
     <main>
         <h1>Join the Chamber</h1>
-        <section class="form-section">
-            <form id="membershipForm" method="get" action="thank-you.html">
-                <label>
-                    First Name
-                    <input type="text" name="fname" title="First Name" required autocomplete="given-name">
-                </label>
-                <label>
-                    Last Name
-                    <input type="text" name="lname" title="Last Name" required autocomplete="family-name">
-                </label>
-                <label>
-                    Organizational Title
-                    <input type="text" name="orgtitle" title="Organizational Title" required autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
-                </label>
-                <label>
-                    Email
-                    <input type="email" name="email" title="Email Address" required autocomplete="email" placeholder="example@example.com">
-                </label>
-                <label>
-                    Mobile Phone
-                    <input type="tel" name="phone" title="Mobile Number" required autocomplete="tel">
-                </label>
-                <label>
-                    Organization Name
-                    <input type="text" name="orgname" title="Organization Name" required autocomplete="organization">
-                </label>
-                <label>
-                    Membership Level
-                    <select name="membership" title="Membership Level" required>
-                        <option value="">Select a level</option>
-                        <option value="np">NP Membership (Free)</option>
-                        <option value="bronze">Bronze Membership</option>
-                        <option value="silver">Silver Membership</option>
-                        <option value="gold">Gold Membership</option>
-                    </select>
-                </label>
-                <label>
-                    Business Description
-                    <textarea name="description" title="Business Description"></textarea>
-                </label>
-                <input type="hidden" name="timestamp" id="timestamp">
-                <input type="submit" value="Join Now">
-            </form>
-        </section>
+        <div class="content-wrapper">
+            <section class="form-section">
+                <form id="membershipForm" method="get" action="thank-you.html">
+                    <label>
+                        First Name
+                        <input type="text" name="fname" title="First Name" required autocomplete="given-name">
+                    </label>
+                    <label>
+                        Last Name
+                        <input type="text" name="lname" title="Last Name" required autocomplete="family-name">
+                    </label>
+                    <label>
+                        Organizational Title
+                        <input type="text" name="orgtitle" title="Organizational Title" required autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" name="email" title="Email Address" required autocomplete="email" placeholder="example@example.com">
+                    </label>
+                    <label>
+                        Mobile Phone
+                        <input type="tel" name="phone" title="Mobile Number" required autocomplete="tel">
+                    </label>
+                    <label>
+                        Organization Name
+                        <input type="text" name="orgname" title="Organization Name" required autocomplete="organization">
+                    </label>
+                    <label>
+                        Membership Level
+                        <select name="membership" title="Membership Level" required>
+                            <option value="">Select a level</option>
+                            <option value="np">NP Membership (Free)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+                    <label>
+                        Business Description
+                        <textarea name="description" title="Business Description"></textarea>
+                    </label>
+                    <input type="hidden" name="timestamp" id="timestamp">
+                    <input type="submit" value="Join Now">
+                </form>
+            </section>
 
-        <section class="membership-cards">
-            <div class="card np-card">
-                <h3>NP Membership</h3>
-                <a href="#np-modal">View Benefits</a>
-            </div>
-            <div class="card bronze-card">
-                <h3>Bronze Membership</h3>
-                <a href="#bronze-modal">View Benefits</a>
-            </div>
-            <div class="card silver-card">
-                <h3>Silver Membership</h3>
-                <a href="#silver-modal">View Benefits</a>
-            </div>
-            <div class="card gold-card">
-                <h3>Gold Membership</h3>
-                <a href="#gold-modal">View Benefits</a>
-            </div>
-        </section>
+            <section class="membership-cards">
+                <div class="card np-card">
+                    <h3>NP Membership</h3>
+                    <a href="#np-modal">View Benefits</a>
+                </div>
+                <div class="card bronze-card">
+                    <h3>Bronze Membership</h3>
+                    <a href="#bronze-modal">View Benefits</a>
+                </div>
+                <div class="card silver-card">
+                    <h3>Silver Membership</h3>
+                    <a href="#silver-modal">View Benefits</a>
+                </div>
+                <div class="card gold-card">
+                    <h3>Gold Membership</h3>
+                    <a href="#gold-modal">View Benefits</a>
+                </div>
+            </section>
+        </div>
 
         <dialog id="np-modal">
             <h4>NP Membership Benefits</h4>

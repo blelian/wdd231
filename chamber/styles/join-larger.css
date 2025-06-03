@@ -21,13 +21,15 @@ header {
   align-items: center;
   text-align: center;
 }
-header p{
+
+header p {
   font-size: xx-large;
   font-weight: bolder;
 }
- h1{
-    font-size: 30px;
-    font-weight: 700;
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .logo-space {
@@ -69,10 +71,17 @@ nav a:hover {
 }
 
 main {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
   padding: 2rem;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.form-section {
+  flex: 2;
 }
 
 .form-section form {
@@ -90,7 +99,9 @@ label {
   font-weight: bold;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-left: 6px solid var(--primary-color);
@@ -116,6 +127,7 @@ input[type="submit"]:hover {
 }
 
 .membership-cards {
+  flex: 1;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
@@ -188,20 +200,4 @@ footer {
   background-color: var(--primary-color);
   color: var(--text-color);
   margin-top: 2rem;
-}
-
-@media (min-width: 768px) {
-  main {
-    grid-template-columns: 2fr 1fr;
-  }
-
-  .membership-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 601px) {
-  #menu-toggle {
-    display: none;
-  }
 }
