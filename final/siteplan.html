@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Blessing Mpofu, WDD231 student at BYU-Idaho">
+  <meta name="description" content="Site plan document for Corlett Quality Kitchens and Home.">
+  <link rel="stylesheet" href="styles/siteplan.css">
+  <title>Site Plan | Corlett Quality Kitchens and Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet"
+  >
+  <script src="../scripts/date.js"></script>
+  
+</head>
+
+<body>
+  <header>
+    <div class="logo-space">
+          <img 
+            src="images/commerce.webp" 
+            alt="Chamber Logo" 
+            width="60" height="72" 
+            srcset="
+              images/corlett.webp 1x,
+              images/corlett@2x.webp 2x,
+              images/corlett@3x.webp 3x
+            " 
+            fetchpriority="high">
+        </div>
+
+    <h1>Site Plan</h1>
+    <p>Corlett Quality Kitchens and Home - Interior Design Company</p>
+  </header>
+
+  <main>
+    <section id="site-name">
+            <h2>1. Site Name</h2>
+      <p><strong>Corlett Quality Kitchens and Home</strong></p>
+      <p>
+        <em>Reason:</em> This name clearly conveys the company’s core focus on custom,
+        high-end kitchen designs and overall home interior solutions. “Corlett Quality” signals
+        both the founder’s name and a commitment to craftsmanship, while “Kitchens and Home”
+        highlights the range of services.
+      </p>
+    </section>
+
+    <section id="site-purpose">
+      <h2>2. Site Purpose</h2>
+      <p>
+        The website will serve as the primary online presence for Corlett Quality Kitchens and Home,
+        focusing on:
+      </p>
+      <ul>
+        <li>
+          Showcasing premium interior design services, especially custom kitchen projects and complete
+          home makeovers.
+        </li>
+        <li>
+          Providing a visually rich portfolio (photo galleries) of completed projects to demonstrate
+          craftsmanship and inspire potential clients.
+        </li>
+        <li>
+          Offering detailed service descriptions (interior design, custom cabinetry, color consultation,
+          etc.) so visitors understand precisely how Corlett can transform their spaces.
+        </li>
+        <li>
+          Enabling visitors to request a quote or book a consultation via an embedded contact form for
+          lead generation.
+        </li>
+      </ul>
+    </section>
+
+    <section id="scenarios">
+      <h2>3. Scenarios</h2>
+      <p>
+        Below are two sample questions representing the target audience’s needs. These will guide
+        content and layout decisions:
+      </p>
+      <ul>
+        <li>
+          <strong>Scenario 1:</strong> “I want a modern kitchen with an island and custom cabinetry
+          that maximizes storage—how quickly can I get a quote and see previous examples of similar
+          work?”
+        </li>
+        <li>
+          <strong>Scenario 2:</strong> “I’m renovating my entire house; I need inspiration for living
+          room color schemes and furniture layouts—where can I view past projects and learn about your
+          design process?”
+        </li>
+      </ul>
+    </section>
+
+    <section id="color-schema">
+      <h2>4. Color Schema</h2>
+
+      <p>
+        We have selected the following CSS custom properties (variables) to maintain cohesive branding:
+      </p>
+      <pre>
+:root {
+  --header-bg: #000000;       /* Black – used for header/nav background & footer text */
+  --accent-color: #c59d5f;    /* Warm gold – used for headings, buttons, links */
+  --card-bg: #f4f4f4;         /* Light gray – used for section backgrounds, portfolio cards */
+  --btn-bg: #c59d5f;          /* Same as accent – used for buttons and CTAs */
+  --btn-text: #ffffff;        /* White – used for text on buttons */
+  --input-border: #cccccc;    /* Neutral gray – used for form input borders */
+  --footer-bg: #f4f4f4;       /* Light gray – used for footer background */
+}
+      </pre>
+
+      <p><strong>Where each color will appear:</strong></p>
+      <ul>
+        <li>
+          <code>--header-bg</code> (<span style="color: var(--header-bg);">Black</span>) → Header background,
+          navigation bar, footer text.
+        </li>
+        <li>
+          <code>--accent-color</code> (<span style="color: var(--accent-color);">Gold</span>) → All
+          <strong>h1/h2/h3</strong> headings, primary buttons (e.g., “Request a Quote”), and any
+          accent elements (e.g., hover states for links).
+        </li>
+        <li>
+          <code>--card-bg</code> (<span style="background: var(--card-bg); padding: 0.1rem 0.25rem;">Light Gray</span>)
+          → Background for service cards, portfolio thumbnails, and any “card”-style containers.
+        </li>
+        <li>
+          <code>--btn-bg</code> (<span style="background: var(--btn-bg); padding: 0.1rem 0.25rem;">Gold</span>)
+          → Button backgrounds (same as accent color for consistency).
+        </li>
+        <li>
+          <code>--btn-text</code> (<span style="color: var(--btn-text); background: var(--btn-bg); padding: 0.1rem 0.25rem;">White on Gold</span>)
+          → Text inside buttons (e.g., “Submit”, “Learn More”).
+        </li>
+        <li>
+          <code>--input-border</code> (<span style="border: 1px solid var(--input-border); padding: 0.1rem 0.25rem;">Gray Border</span>)
+          → Borders for all form inputs/textareas.
+        </li>
+        <li>
+          <code>--footer-bg</code> (<span style="background: var(--footer-bg); padding: 0.1rem 0.25rem;">Light Gray</span>)
+          → Footer’s background color to visually separate it from main content.
+        </li>
+      </ul>
+    </section>
+
+    <section id="typography">
+      <h2>5. Typography</h2>
+      <p>
+        We’ve chosen two complementary Google Fonts to maintain readability and a modern feel:
+      </p>
+      <ul>
+        <li>
+          <strong>Montserrat</strong> (weight 700) – Used for all headings (H1, H2, H3) to create a
+          bold, elegant presence. Example in this document:
+          <br />
+          <span style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.2rem;">
+            “Example Heading in Montserrat”
+          </span>
+        </li>
+        <li>
+          <strong>Open Sans</strong> (weights 400 & 600) – Used for all body text (paragraphs,
+          list items) and form labels. Example in this document:
+          <br />
+          <span style="font-family: 'Open Sans', sans-serif; font-weight: 400; font-size: 1rem;">
+            “Example body text in Open Sans — clean and easy to read.”
+          </span>
+        </li>
+      </ul>
+      <p>
+        In this site plan document itself, you can see Montserrat applied to headings and Open Sans
+        applied to paragraphs, lists, and labels consistently.
+      </p>
+    </section>
+
+    <section id="wireframes">
+      <h2>6. Wireframes</h2>
+      <p>
+        Two simplified wireframes—one for mobile (vertical list layout) and one for desktop (vertical list).
+        Each wireframe includes a footer.
+      </p>
+
+      <h3>6.1 Mobile View (List Display)</h3>
+      <div class="wireframe mobile" aria-label="Mobile wireframe">
+        <div class="box">
+          <div class="box-label">Header (Logo + Nav Toggle)</div>
+          <div>Black Banner: “Corlett Quality Kitchens and Home”</div>
+        </div>
+        <div class="box">
+          <div class="box-label">Hero Section</div>
+          <div>Full‐width image + centered text (“Transform Your Space”).</div>
+        </div>
+        <div class="box">
+          <div class="box-label">About Us</div>
+          <div>Short paragraph describing the studio’s mission.</div>
+        </div>
+        <div class="box">
+          <div class="box-label">Services (List)</div>
+          <div>
+            • Interior Design<br />
+            • Home Renovations<br />
+            • Custom Cabinetry<br />
+            • Color Consultation
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-label">Portfolio (Carousel/List of Images)</div>
+          <div>Single‐column stack of project thumbnails.</div>
+        </div>
+        <div class="box">
+          <div class="box-label">Contact Form</div>
+          <div>Inputs: Name, Email, Phone, Message, Submit Button</div>
+        </div>
+        <div class="box">
+          <div class="box-label">Footer</div>
+          <div>
+            © 2025 Corlett Quality Kitchens and Home<br />
+            Johannesburg, South Africa | info@corlettquality.org
+          </div>
+        </div>
+      </div>
+
+      <h3>6.2 Desktop View (List Display)</h3>
+      <div class="wireframe desktop" aria-label="Desktop wireframe">
+        <div class="box">
+          <div class="box-label">Header</div>
+          <div>Full‐width bar: Logo on left, Site Title centered, Nav links on right.</div>
+        </div>
+        <div class="box">
+          <div class="box-label">Hero Section</div>
+          <div>Full‐width background image with overlay text (“Transform Your Space”) and CTA button.</div>
+        </div>
+        <div class="box">
+          <div class="box-label">About Us</div>
+          <div>Single horizontal section: paragraph about the company’s mission.</div>
+        </div>
+        <div class="box">
+          <div class="box-label">Services</div>
+          <div>List of services stacked vertically: Interior Design, Home Renovations, Custom Cabinetry, Color Consultation.</div>
+        </div>
+        <div class="box">
+          <div class="box-label">Portfolio</div>
+          <div>List of project thumbnails stacked vertically, each with a caption underneath.</div>
+        </div>
+        <div class="box">
+          <div class="box-label">Contact Form</div>
+          <div>Full‐width form: Name, Email, Phone, Message, Submit Button.</div>
+        </div>
+        <div class="box">
+          <div class="box-label">Footer</div>
+          <div>
+            © 2025 Corlett Quality Kitchens and Home | Johannesburg, South Africa<br />
+            info@corlettquality.org | Social Media Icons
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="site-structure">
+      <h2>7. Site Structure (Three Pages)</h2>
+      <p>
+        This website will consist of exactly three top‐level pages. Navigation will be consistent
+        across all pages, and the color schema/typography will remain the same.
+      </p>
+      <ul>
+        <li>
+          <strong>Home</strong><br />
+          – Hero section (full‐width image + overlay text/button)<br />
+          – Intro “About Us” snippet<br />
+          – Services overview (stacked list on desktop/mobile)<br />
+          – Featured portfolio thumbnails (stacked list on desktop/mobile)<br />
+          – Quick link to “Request a Quote” (anchor to contact)<br />
+          – Footer
+        </li>
+        <li>
+          <strong>Services</strong><br />
+          – Full descriptions of each service (Interior Design, Home Renovations, Custom Cabinetry,
+          Color Consultation)<br />
+          – Individual service images (one per section)<br />
+          – “Get a Quote” button that anchors down to the contact form on this page<br />
+          – Footer
+        </li>
+        <li>
+          <strong>Contact</strong><br />
+          – Contact form (Name, Email, Phone, Message, Submit button)<br />
+          – Company address and map embed (if desired)<br />
+          – Brief testimonial or trust indicators (e.g., star ratings or short quotes)<br />
+          – Footer
+        </li>
+      </ul>
+    </section>
+
+    <section id="testing">
+      <h2>8. Testing</h2>
+      <p>The following checks will be performed before launch:</p>
+      <ul>
+        <li>
+          <strong>HTML &amp; CSS Validation:</strong>
+          Run through W3C Validator to confirm no syntax errors and proper <code>&lt;meta&gt;</code>
+          tags/programmatic accessibility.
+        </li>
+        <li>
+          <strong>Accessibility:</strong> Use Lighthouse (Chrome DevTools) to verify color contrast
+          (black text on white background, gold accents on white) and keyboard‐tab navigation
+          through links and form.
+        </li>
+        <li>
+          <strong>Responsive Layout:</strong> Resize the viewport to ensure:
+          <ul>
+            <li>
+              <em>Mobile:</em> All major sections stack vertically, navigation collapses into a
+              hamburger icon, wireframe reflects list style.
+            </li>
+            <li>
+              <em>Desktop:</em> All sections stack vertically in a single column (list view), navigation remains horizontal, wireframe reflects sequence: Header → Hero → About → Services → Portfolio → Contact → Footer.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Performance:</strong> Check Lighthouse for LCP (&lt;1.2 s), CLS (&lt;0.1), and ensure no
+          render‐blocking CSS. Optimize images (use <code>webp</code> or properly sized JPEGs).
+        </li>
+        <li>
+          <strong>SEO &amp; Metadata:</strong> Confirm each page has a unique <code>&lt;title&gt;</code>
+          and <code>&lt;meta name="description"&gt;</code>, plus Open Graph tags for social sharing.
+        </li>
+        <li>
+          <strong>Cross‐Browser Testing:</strong> Verify layout and functionality in:
+          Chrome, Firefox, Edge, and Safari (latest stable versions).
+        </li>
+      </ul>
+    </section>
+  </main>
+
+    <footer>
+     <p>Blessing Mpofu | WDD 231</p>
+     <p>Corlett Quality Kitchens And Home | Johannesburg, South Africa | info@corlettqualty.org</p>
+    <p><span id="currentyear"></span></p>
+    <p><span id="lastmodified"></span></p>
+  </footer>
+</body>
+</html>
