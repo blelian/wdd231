@@ -5,8 +5,6 @@
   --accent-color: #000000;
   --image-background: #D9D9EC;
 }
-
-@media screen and (min-width: 600px) {
   body {
     font-size: 1rem;
     background-color: var(--background-color);
@@ -128,11 +126,7 @@
     font-size: xx-large;
   }
 
-  main h1 {
-    color: var(--primary-color);
-  }
-
-  .hero-text a.cta {
+    .hero-text a.cta {
     background-color: var(--primary-color);
     color: var(--text-color);
     padding: 0.5rem 1rem;
@@ -299,7 +293,7 @@
     padding: 1rem;
     font-size: 1rem;
   }
-}
+
 
 footer .social-icons {
   display: flex;

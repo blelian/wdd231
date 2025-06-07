@@ -12,9 +12,18 @@ body {
   color: var(--accent-color);
   margin: 0;
 }
+h1 {
+  color: var(--primary-color);
+}
 
 #menu-toggle {
-  display: none;
+  display: block;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1100;
 }
 
 .header-container {
@@ -60,35 +69,60 @@ header {
 }
 
 nav {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0;
-  padding-bottom: 0;
   background-color: var(--image-background);
 }
 
-nav ul {
-  display: flex;
-  gap: 3rem;
-  font-size: 1.2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+#primary-nav {
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  width: 220px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  z-index: 1000;
+  padding: 1rem 0;
 }
 
-nav ul li a {
+#primary-nav.open {
+  display: flex;
+}
+
+#primary-nav ul {
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+#primary-nav ul li a {
+  display: block;
+  padding: 0.75rem 1.5rem;
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 700;
-  padding: 0.5rem 1rem;
   cursor: pointer;
+  border-radius: 5px;
 }
 
-nav ul li a.active,
-nav ul li a:hover {
+#primary-nav ul li a.active,
+#primary-nav ul li a:hover {
   background-color: var(--primary-color);
   color: var(--text-color);
-  border-radius: 5px;
+}
+
+#close-menu {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  color: var(--primary-color);
 }
 
 footer {
@@ -106,7 +140,6 @@ footer .social-icons {
   margin-top: 10px;
 }
 
-/* Card Container: one column layout */
 #cards {
   display: flex;
   flex-direction: column;
@@ -132,7 +165,6 @@ footer .social-icons {
   align-items: start;
 }
 
-/* TITLE */
 .member-card h2 {
   grid-area: title;
   font-size: 1.25rem;
@@ -140,7 +172,6 @@ footer .social-icons {
   margin: 0.5rem 0 0;
 }
 
-/* IMAGE FULL WIDTH */
 .member-card figure {
   grid-area: image;
   background-color: var(--background-color);
@@ -155,13 +186,11 @@ footer .social-icons {
   display: block;
 }
 
-/* DESCRIPTION */
 .member-card p {
   grid-area: description;
   margin: 0;
 }
 
-/* ADDRESS */
 .member-card address {
   grid-area: address;
   margin: 0;
@@ -169,7 +198,6 @@ footer .social-icons {
   font-weight: bold;
 }
 
-/* LEARN MORE BUTTON */
 .member-card button {
   grid-area: button;
   padding: 0.5rem 1rem;
@@ -182,7 +210,6 @@ footer .social-icons {
   margin-top: 0.75rem;
 }
 
-/* VISIT MESSAGE STYLE */
 .visit-message {
   background-color: var(--image-background);
   padding: 1rem;
@@ -192,43 +219,68 @@ footer .social-icons {
   font-family: 'Montserrat', sans-serif;
 }
 
-
 .member-card button:active,
 .member-card button:hover {
   background-color: var(--accent-color);
   color: var(--text-color);
   border-radius: 5px;
 }
+
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-    width: 80%;
-    max-width: 500px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  width: 80%;
+  max-width: 500px;
 }
 
 .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 5px 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+@media screen and (min-width: 1025px) {
+  #menu-toggle {
+    display: none;
+  }
+
+  #primary-nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    width: auto;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  #primary-nav ul {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  #close-menu {
+    display: none;
+  }
 }

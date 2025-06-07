@@ -1,0 +1,12 @@
+:root {
+  --primary-color: #2F2A6A;
+  --text-color: #ffffff;
+  --background-color: #f4f4f4;
+  --accent-color: #000000;
+  --image-background: #D9D9EC;
+}
+
+h1.first {
+  color: var(--primary-color);
+  padding-left: 15px;
+}
