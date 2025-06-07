@@ -1,0 +1,50 @@
+[
+  {
+    "name": "White Waters",
+    "address": "Along Matobo Road, Gweru, Zimbabwe",
+    "description": "A scenic recreational area featuring waterfalls, picnic spots, and tranquil surroundings ideal for family outings.",
+    "image": "images/white-waters.webp"
+  },
+  {
+    "name": "Zimbabwe Military Museum",
+    "address": "5th Street, Gweru, Zimbabwe",
+    "description": "Zimbabwe’s only military museum, showcasing military aircraft, vehicles, weapons, and the history of the country’s armed forces.",
+    "image": "images/zimbabwe-millitary-museum.webp"
+  },
+  {
+    "name": "Naletale Ruins",
+    "address": "Near Shangani, 30 km northwest of Gweru, Zimbabwe",
+    "description": "Ancient stone ruins from the Torwa State, known for intricate decorative walls and historical significance similar to Great Zimbabwe.",
+    "image": "images/naletale-ruins.webp"
+  },
+  {
+    "name": "Runde River",
+    "address": "Zvishavane District, Midlands Province, Zimbabwe",
+    "description": "A major river that supports wildlife and local agriculture, popular for birdwatching and scenic walks.",
+    "image": "images/runde-river.webp"
+  },
+  {
+    "name": "Mberengwa Hills",
+    "address": "Mberengwa District, Midlands Province, Zimbabwe",
+    "description": "Picturesque hills rich in minerals and cultural history, offering great hiking opportunities and ancestral stories.",
+    "image": "images/mberengwa.webp"
+  },
+  {
+    "name": "Lake Mutirikwi (Southern Tip)",
+    "address": "Near Zvishavane, Zimbabwe",
+    "description": "The southern tip of this large lake is perfect for boating, fishing, and relaxing by the water with nearby views of wildlife.",
+    "image": "images/lake-mutirikwi.webp"
+  },
+  {
+    "name": "Boterekwa Pass",
+    "address": "Shurugwi, Midlands Province, Zimbabwe",
+    "description": "A dramatic mountain pass with winding roads through granite cliffs—ideal for photography and sightseeing.",
+    "image": "images/boterekwa-pass.webp"
+  },
+  {
+    "name": "Antelope Park",
+    "address": "13 km from Gweru, Vungu Road, Zimbabwe",
+    "description": "A private game reserve offering up-close wildlife encounters, lion conservation, horseback safaris, and lodging.",
+    "image": "images/antelope-park.webp"
+  }
+]
