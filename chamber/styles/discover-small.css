@@ -12,6 +12,7 @@ body {
   color: var(--accent-color);
   margin: 0;
 }
+
 h1 {
   color: var(--primary-color);
 }
@@ -130,6 +131,7 @@ nav {
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
+  min-height: 3000px;
 }
 
 .member-card {
@@ -204,11 +206,10 @@ nav {
   font-family: 'Montserrat', sans-serif;
 }
 
-.member-card button:active,
-.member-card button:hover {
+.member-card button:hover,
+.member-card button:active {
   background-color: var(--accent-color);
   color: var(--text-color);
-  border-radius: 5px;
 }
 
 .modal {
@@ -249,7 +250,6 @@ nav {
   #menu-toggle {
     display: none;
   }
-
   #primary-nav {
     display: flex !important;
     position: static;
@@ -259,13 +259,8 @@ nav {
     border-radius: 0;
     padding: 0;
   }
-
   #primary-nav ul {
     flex-direction: row;
     gap: 3rem;
-  }
-
-  #close-menu {
-    display: none;
   }
 }

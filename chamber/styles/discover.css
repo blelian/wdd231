@@ -10,6 +10,7 @@ h1.first {
   color: var(--primary-color);
   padding-left: 15px;
 }
+
 footer {
   min-height: 80px;
   padding: 1rem 0;
@@ -19,11 +20,20 @@ footer {
   font-size: 1rem;
   box-sizing: border-box;
 }
-footer .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
+
+footer p {
+  margin: 0.25rem 0;
 }
 
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
 
+footer p span {
+  display: inline-block;
+  min-width: 8ch;
+  min-height: 1em;
+}
