@@ -298,3 +298,6 @@ textarea:focus {
 html {
   scroll-behavior: smooth;
 }
+.hamburger-menu{
+  display: none;
+}

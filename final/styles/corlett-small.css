@@ -3,7 +3,7 @@
   --main-height: 300px;
   --text-color: #333;
   --background-color: #ffffff;
-  --header-bg: #000;
+  --header-bg: #000;        
   --accent-color: #c59d5f;
   --card-bg: #f4f4f4;
   --btn-bg: #c59d5f;
@@ -25,31 +25,76 @@ body {
   padding: 1rem 0;
 }
 
-header .container {
+header {                          
+  position: relative;
+  background: var(--header-bg);
+  padding: 1rem 0 0 0; 
+  z-index: 1000; 
+}
+
+header .container {               
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   text-align: center;
+  
 }
 
 header .branding {
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
 }
 
-header .branding p {
-  font-size: 1.2rem;
-  text-align: center;
+header .branding img {
+  max-width: 100px;
+  height: auto;
 }
 
-nav ul {
-  display: none;
-  list-style: none;
-  padding-left: 0;
+header .branding p {
+  font-size: 1.2rem;
   margin: 0;
 }
 
-nav.nav-open ul {
-  display: block;
+nav ul {
+  display: none;          
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  flex-direction: column; 
 }
+
+nav.nav-open ul {
+  display: block;         
+}
+
+nav.nav-open {
+  max-height: 500px; 
+  transition: max-height 0.4s ease;
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  z-index: 9999;
+  display: block !important;
+  transform: none !important;
+  padding: 0;
+  margin: 0;
+}
+.hamburger-menu.active {
+  color: var(--accent-color);
+}
+
+
 
 h2 {
   font-size: 1.5rem;
@@ -70,10 +115,10 @@ h2 {
 
 .image-placeholder {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "img"
     "p";
-  place-items: center; 
+  place-items: center;
 }
 
 .image-placeholder img {
@@ -89,16 +134,17 @@ h2 {
 }
 
 .hero-gallery {
-  display: flex;
-  flex-direction: column;
+  display: block;
   height: var(--main-height, auto);
-  overflow-x: auto;
+  overflow: hidden;
+  margin-top: 0;  
+  margin-top: 0;
+  margin-top: -32px;
 }
 
 .hero-image {
   position: relative;
   width: 100%;
-  height: auto;
   display: none;
 }
 
@@ -115,8 +161,7 @@ h2 {
 
 .hero-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
@@ -132,11 +177,10 @@ h2 {
   font-size: 1.5rem;
 }
 
-/* Hero Button */
 .hero-text .btn {
   display: inline-block;
-  background: black; 
-  color: white; 
+  background: #000;
+  color: #fff;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 5px;
@@ -145,23 +189,8 @@ h2 {
 }
 
 @keyframes fadeScale {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.05);
-  }
-}
-
-form {
-  padding: 0 0.5rem;
-}
-
-footer {
-  font-size: 0.85rem;
-  padding: 1rem;
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
 }
 
 #contact {
@@ -188,7 +217,7 @@ footer {
 #contact textarea {
   font-size: 1rem;
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--input-border);
   border-radius: 6px;
   width: 100%;
   box-sizing: border-box;
@@ -214,25 +243,32 @@ footer {
 #contact button:hover {
   background-color: var(--background-color);
 }
-.hamburger-menu {
+
+footer {
+  font-size: 0.85rem;
+  padding: 1rem;
+  background: var(--footer-bg);
+}
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--header-bg) !important;
+  color: #fff;
+  border: none !important;
   font-size: 2rem;
-  background: none;
-  border: none;
+  padding: 0.25rem 0.5rem;
   cursor: pointer;
-  color: var(--text-color);
+  z-index: 999;
+  opacity: 0.7;
+  border-radius: 5px;
 }
-
-.hamburger-menu.active {
-  color: white;
+.nav-arrow:hover {
+  opacity: 1;
 }
-
-nav ul {
-  display: none;
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
+.nav-arrow:first-of-type {
+  left: 10px;
 }
-
-nav ul.show {
-  display: block;
+.nav-arrow:last-of-type {
+  right: 10px;
 }
