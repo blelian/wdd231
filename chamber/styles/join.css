@@ -23,6 +23,13 @@ header p{
     font-size: xx-large;
     font-weight: bolder;
 }
+nav ul li a.active,
+  nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 5px;
+  }
+
  h1{
     font-size: 30px;
     font-weight: 700;
