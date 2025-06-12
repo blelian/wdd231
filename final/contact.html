@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Blessing Mpofu, WDD231 student at BYU Idaho">
+  <meta name="description" content="Contact page for Corlett Quality Kitchens and Home">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/corlett.css" media="screen and (max-width: 600px)">
+  <link rel="stylesheet" href="styles/corlett-larger.css" media="screen and (min-width: 601px)">
+  <link rel="stylesheet" href="styles/contact-larger.css" media="screen and (min-width: 601px)">
+  <title>Contact | Corlett Quality Kitchens and Home</title>
+  <script src="../scripts/date.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="branding">
+        <div class="logo-space">
+          <img src="images/corlett.webp" alt="Logo" width="60" height="72">
+        </div>
+        <p>Corlett Quality Kitchens And Home</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container" id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or ready to start your kitchen transformation? Reach out below!</p>
+
+    <div class="contact-grid">
+<form action="thank-you.html" method="get">
+  <input type="text" name="name"     placeholder="Your Name"    required />
+  <input type="email" name="email"   placeholder="Your Email"   required />
+  <input type="tel"   name="phone"   placeholder="Your Phone"   required />
+  <textarea    name="message"        placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+
+      <div class="modal-buttons">
+        <button class="modal-btn" data-modal="modal1">Design Tips</button>
+        <button class="modal-btn" data-modal="modal2">Materials Guide</button>
+        <button class="modal-btn" data-modal="modal3">Why Choose Us</button>
+        <button class="modal-btn" data-modal="modal4">FAQ</button>
+      </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="modal1">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Top Kitchen Design Tips</h3>
+        <p>Consider lighting, layout, and storage efficiency when designing your kitchen. A well-planned space adds both beauty and functionality.</p>
+      </div>
+    </div>
+
+    <div class="modal" id="modal2">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Materials Guide</h3>
+        <p>We use premium wood, quartz, and eco-friendly laminates to ensure both durability and aesthetic appeal in every design.</p>
+      </div>
+    </div>
+
+    <div class="modal" id="modal3">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Why Choose Us</h3>
+        <p>We combine creativity with craftsmanship to deliver timeless kitchen solutions tailored to your lifestyle and budget.</p>
+      </div>
+    </div>
+
+    <div class="modal" id="modal4">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Frequently Asked Questions</h3>
+        <p>Need to know our typical project timeline or payment options? Find answers to common questions here.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Blessing Mpofu | WDD 231</p>
+    <p>Corlett Quality Kitchens And Home | Johannesburg, South Africa | info@corlettquality.org</p>
+    <div class="social-icons">
+      <a href="https://web.facebook.com/blessing.mpofu.35" target="_blank" rel="noopener" aria-label="Facebook">
+        <img src="../chamber/images/social/facebook.webp" alt="Facebook" width="24" height="24" />
+      </a>
+      <a href="https://web.facebook.com/blessing.mpofu.35" target="_blank" rel="noopener" aria-label="Messenger">
+        <img src="../chamber/images/social/facebook-messenger.webp" alt="Messenger" width="24" height="24" />
+      </a>
+      <a href="https://www.linkedin.com/in/blessingmpofu1" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="../chamber/images/social/linkedin.webp" alt="LinkedIn" width="24" height="24" />
+      </a>
+      <a href="https://wa.me/+27845179156" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <img src="../chamber/images/social/whatsapp.webp" alt="WhatsApp" width="24" height="24" />
+      </a>
+      <a href="https://twitter.com/X.com/bullsurus" target="_blank" rel="noopener" aria-label="Twitter">
+        <img src="../chamber/images/social/twitter.webp" alt="Twitter" width="24" height="24" />
+      </a>
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+        <img src="../chamber/images/social/youtube.webp" alt="YouTube" width="24" height="24" />
+      </a>
+      <a href="https://t.me/BlessingMpofu" target="_blank" rel="noopener" aria-label="Telegram">
+        <img src="../chamber/images/social/telegram.webp" alt="Telegram" width="24" height="24" />
+      </a>
+    </div>
+    <p><span id="currentyear"></span></p>
+    <p><span id="lastmodified"></span></p>
+  </footer>
+
+  <script>
+    const modalBtns = document.querySelectorAll('.modal-btn');
+    const modals = document.querySelectorAll('.modal');
+    const closes = document.querySelectorAll('.close');
+
+    modalBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const modal = document.getElementById(btn.dataset.modal);
+        modal.style.display = 'block';
+      });
+    });
+
+    closes.forEach(close => {
+      close.addEventListener('click', () => {
+        close.closest('.modal').style.display = 'none';
+      });
+    });
+
+    window.addEventListener('click', (e) => {
+      modals.forEach(modal => {
+        if (e.target === modal) modal.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>

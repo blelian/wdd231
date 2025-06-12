@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Blessing Mpofu, WDD231 student at BYU Idaho">
+  <meta name="description" content="Thank You page for Corlett Quality Kitchens and Home">
+  <title>Thank You | Corlett Quality Kitchens and Home</title>
+  <script src="../scripts/date.js" defer></script>
+  <style>
+    :root {
+      --transition-duration: 0.6s;
+      --text-color: #333;
+      --background-color: #ffffff;
+      --header-bg: #000;
+      --accent-color: #c59d5f;
+      --card-bg: #f4f4f4;
+      --btn-bg: #c59d5f;
+      --btn-text: #ffffff;
+      --footer-bg: #f4f4f4;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: var(--header-bg);
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    header .clap {
+      font-size: 2rem;
+      display: inline-block;
+      animation: clap 0.5s infinite alternate;
+      margin: 0 0.5rem;
+    }
+    h1 {
+      display: inline-block;
+      font-size: 2rem;
+      color: var(--accent-color);
+      margin: 0.5rem 0;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeIn 1s forwards;
+    }
+    .card ul { list-style: none; margin: 1rem 0; padding: 0; }
+    .card li { margin-bottom: 0.5rem; }
+    .btn {
+      display: inline-block;
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+      transition: background var(--transition-duration) ease;
+      animation: fadeScale 5s ease-in-out infinite;
+    }
+    .btn:hover { background: #a48348; }
+    footer {
+      text-align: center;
+      background-color: var(--header-bg);
+      color: var(--background-color);
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes clap {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.2); }
+    }
+    @keyframes fadeScale {
+      0% { opacity: 0; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.05); }
+      100% { opacity: 0; transform: scale(0.8); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="clap">👏</span>
+    <h1>Thank You!</h1>
+    <span class="clap">👏</span>
+  </header>
+  <main>
+    <div class="card" id="results">
+      <p>We appreciate your submission and will get back to you soon.</p>
+      <ul id="user-info"></ul>
+      <a href="index.html" class="btn">Return Home</a>
+    </div>
+  </main>
+  <footer>
+    <p>Blessing Mpofu | WDD 231</p>
+    <p>Corlett Quality Kitchens And Home | Johannesburg, South Africa | info@corlettquality.org</p>
+    <div class="social-icons">
+      <a href="https://web.facebook.com/blessing.mpofu.35" target="_blank" rel="noopener" aria-label="Facebook">
+        <img src="../chamber/images/social/facebook.webp" alt="Facebook" width="24" height="24" />
+      </a>
+      <a href="https://web.facebook.com/blessing.mpofu.35" target="_blank" rel="noopener" aria-label="Messenger">
+        <img src="../chamber/images/social/facebook-messenger.webp" alt="Messenger" width="24" height="24" />
+      </a>
+      <a href="https://www.linkedin.com/in/blessingmpofu1" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="../chamber/images/social/linkedin.webp" alt="LinkedIn" width="24" height="24" />
+      </a>
+      <a href="https://wa.me/+27845179156" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <img src="../chamber/images/social/whatsapp.webp" alt="WhatsApp" width="24" height="24" />
+      </a>
+      <a href="https://x.com/bullsurus" target="_blank" rel="noopener" aria-label="X (formerly Twitter)">
+        <img src="../chamber/images/social/twitter.webp" alt="X (Twitter)" width="24" height="24" />
+      </a>
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+        <img src="../chamber/images/social/youtube.webp" alt="YouTube" width="24" height="24" />
+      </a>
+      <a href="https://t.me/BlessingMpofu" target="_blank" rel="noopener" aria-label="Telegram">
+        <img src="../chamber/images/social/telegram.webp" alt="Telegram" width="24" height="24" />
+      </a>
+    </div>
+    <p><span id="currentyear"></span></p>
+    <p><span id="lastmodified"></span></p>
+  </footer>
+  <script>
+    // Populate year
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+
+    // Read all URL parameters and display dynamically
+    const params = new URLSearchParams(window.location.search);
+    const list = document.getElementById('user-info');
+
+    if (!params.toString()) {
+      list.innerHTML = '<li>No data received.</li>';
+    } else {
+      for (const [key, value] of params.entries()) {
+        const label = key.charAt(0).toUpperCase() + key.slice(1);
+        const li = document.createElement('li');
+        li.textContent = `${label}: ${decodeURIComponent(value)}`;
+        list.appendChild(li);
+      }
+    }
+  </script>
+</body>
+</html>

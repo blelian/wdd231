@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Blessing Mpofu, WDD231 student at BYU Idaho">
-  <meta name="description" content="Home page for Corlett Quality kitchens and home, an excellent way for home improvement.">
-  <meta property="og:title" content="WDD231 - Blessing Mpofu - Final Home Page">
-  <meta property="og:image" content="https://blelian.github.io/wdd231/chamber/images/commerce.webp">
-  <meta property="og:description" content="Explore our impressive range of quality designs.">
-  <meta property="og:url" content="https://blelian.github.io/wdd231/final/index.html">
-  <meta property="og:locale" content="en_US">
-  <link rel="icon" href="./images/corlett.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Blessing Mpofu, WDD231 student at BYU Idaho" />
+  <meta name="description" content="Home page for Corlett Quality Kitchens and Home, an excellent way for home improvement." />
+  <meta property="og:title" content="WDD231 - Blessing Mpofu - Final Home Page" />
+  <meta property="og:image" content="https://blelian.github.io/wdd231/chamber/images/commerce.webp" />
+  <meta property="og:description" content="Explore our impressive range of quality designs." />
+  <meta property="og:url" content="https://blelian.github.io/wdd231/final/index.html" />
+  <meta property="og:locale" content="en_US" />
+  
+  <link rel="icon" href="./images/corlett.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" />
   </noscript>
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/corlett.css" media="screen and (max-width: 600px)">
-  <link rel="stylesheet" href="styles/corlett-larger.css" media="screen and (min-width: 601px)">
+
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/corlett-small.css" media="screen and (min-width:320px) and (max-width: 640px)">
+  <link rel="stylesheet" href="styles/corlett-medium.css" media="screen and (min-width:641px) and (max-width:1024px)">
+  <link rel="stylesheet" href="styles/corlett-larger.css" media="screen and (min-width: 1025px)">
+
   <title>Home | Corlett Quality Kitchens and Home</title>
+
   <script src="scripts/corlett.js" defer></script>
-  <script src="../scripts/date.js"></script>
+  <script src="../scripts/date.js" defer></script>
+  <script src="scripts/hero-slideshow.js" defer></script>
 </head>
 <body>
   <header>
@@ -31,115 +38,176 @@
         <div class="logo-space">
           <img 
             src="images/commerce.webp" 
-            alt="Chamber Logo" 
+            alt="Corlett Quality Kitchens Logo" 
             width="60" height="72" 
-            srcset="
-              images/corlett.webp 1x,
-              images/corlett@2x.webp 2x,
-              images/corlett@3x.webp 3x
-            " 
-            fetchpriority="high">
+            srcset="images/corlett.webp 1x, images/corlett@2x.webp 2x, images/corlett@3x.webp 3x"
+            fetchpriority="high" />
         </div>
         <p>Corlett Quality Kitchens And Home</p>
       </div>
       <nav>
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="../final/services.html">Services</a></li>
+          <li><a href="../final/contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section id="hero-gallery">
-    <div class="hero-gallery">
-      <div class="hero-text">
-        <h2>Transform Your Space</h2>
-        <p>Interior design that speaks to your soul.</p>
-        <a href="#contact" class="btn">Book a Consultation</a>
+  <main>
+    <section id="hero-gallery">
+      <div class="hero-gallery">
+        <div class="hero-text">
+          <h2>Transform Your Space</h2>
+          <p>Interior design that speaks to your soul.</p>
+          <a href="#contact" class="btn">Book a Consultation</a>
+        </div>
+
+        <div class="hero-image active" data-index="0">
+          <img 
+              src="images/hero-one.webp" 
+              srcset="images/hero-one-small.webp 1x,
+                      images/hero-one-medium.webp 2x,
+                      images/hero-one.webp 3x"
+              alt="Bright modern kitchen design" />
       </div>
 
-      <div class="hero-image active" data-index="0">
-        <img src="images/hero-one.webp" alt="Hero Image 1">
-      </div>
       <div class="hero-image" data-index="1">
-        <img src="./images/hero-two.webp" alt="Hero Image 2">
+          <img 
+              src="images/hero-two.webp" 
+              srcset="images/hero-two-small.webp 1x,
+                      images/hero-two-medium.webp 2x,
+                      images/hero-two.webp 3x" 
+              alt="Spacious living room with wood tones" />
       </div>
+
       <div class="hero-image" data-index="2">
-        <img src="images/hero-three.webp" alt="Hero Image 3">
+          <img 
+              src="images/hero-three.webp" 
+              srcset="images/hero-three-small.webp 1x,
+                      images/hero-three-medium.webp 2x,
+                      images/hero-three.webp 3x"
+              alt="Elegant bathroom interior" />
       </div>
+
       <div class="hero-image" data-index="3">
-        <img src="images/hero-four.webp" alt="Hero Image 4">
+          <img 
+              src="images/hero-four.webp" 
+              srcset="images/hero-four-small.webp 1x,
+                      images/hero-four-medium.webp 2x,
+                      images/hero-four.webp 3x"
+              alt="Modern home office setup" />
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="about" class="container">
-    <h2>About Us</h2>
-    <p>We are a creative design studio transforming homes into personalized sanctuaries. With years of experience and a passion for aesthetics, we deliver stunning results tailored to your needs.</p>
-  </section>
+    <section id="about" class="container">
+      <h2>About Us</h2>
+      <p>We are a creative design studio transforming homes into personalized sanctuaries. With years of experience and a passion for aesthetics, we deliver stunning results tailored to your needs.</p>
+    </section>
 
-  <section id="services" class="container">
-    <h2>Our Services</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Interior Design</h3>
-        <p>Customized design solutions tailored to reflect your style and functional needs.</p>
+    <section id="services" class="container">
+      <h2>Our Services</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Interior Design</h3>
+          <p>Customized design solutions tailored to reflect your style and functional needs.</p>
+        </div>
+        <div class="card">
+          <h3>Home Renovations</h3>
+          <p>Full-service remodeling including kitchens, bathrooms, and living spaces.</p>
+        </div>
+        <div class="card">
+          <h3>Furniture & Decor</h3>
+          <p>Handpicked pieces and decorative elements that complete your space with elegance.</p>
+        </div>
+        <div class="card">
+          <h3>Color Consultation</h3>
+          <p>Expert advice on color schemes to bring harmony and personality to every room.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Home Renovations</h3>
-        <p>Full-service remodeling including kitchens, bathrooms, and living spaces.</p>
-      </div>
-      <div class="card">
-        <h3>Furniture & Decor</h3>
-        <p>Handpicked pieces and decorative elements that complete your space with elegance.</p>
-      </div>
-      <div class="card">
-        <h3>Color Consultation</h3>
-        <p>Expert advice on color schemes to bring harmony and personality to every room.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="portfolio" class="container">
-    <h2>Portfolio</h2>
-    <div class="grid">
-      <div class="image-placeholder">
-        <img src="images/kitchen-reno.webp" alt="Modern kitchen renovation">
-        <p>Modern Kitchen Renovation</p>
+    <section id="portfolio" class="container">
+      <h2>Portfolio</h2>
+      <div class="grid">
+        <div class="image-placeholder">
+          <img 
+              src="images/modern-kitchen.webp" 
+              srcset="images/modern-kitchen-small.webp 1x,
+                      images/modern-kitchen-medium.webp 2x,
+                      images/modern-kitchen.webp 3x"
+               alt="Modern kitchen renovation" loading="lazy" />
+          <p>Modern Kitchen Renovation</p>
+        </div>
+        <div class="image-placeholder">
+          <img 
+               src="images/living-room.webp" 
+               srcset="images/living-room-small.webp 1x,
+                       images/living-room-medium.webp 2x,
+                       images/living-room.webp 3x"      
+               alt="Contemporary living room design" loading="lazy" />
+          <p>Contemporary Living Room</p>
+        </div>
+        <div class="image-placeholder">
+          <img 
+               src="images/bedroom.webp" 
+               srcset="images/bedroom-small.webp 1x,
+                       images/bedroom-medium.webp 2x,
+                       images/bedroom.webp 3x"
+               alt="Elegant bedroom makeover" loading="lazy" />
+          <p>Elegant Bedroom Makeover</p>
+        </div>
+        <div class="image-placeholder">
+          <img 
+               src="images/kitchen.webp" 
+               srcset="images/kitchen-small.webp 1x,
+                       images/kitchen-medium.webp 2x,
+                       images/kitchen.webp 3x"
+               alt="Home office setup" loading="lazy" />
+          <p>Functional Home Office Design</p>
+        </div>
       </div>
-      <div class="image-placeholder">
-        <img src="images/living-room.webp" alt="Contemporary living room design">
-        <p>Contemporary Living Room</p>
-      </div>
-      <div class="image-placeholder">
-        <img src="images/bedroom-makeover.webp" alt="Elegant bedroom makeover">
-        <p>Elegant Bedroom Makeover</p>
-      </div>
-      <div class="image-placeholder">
-        <img src="images/home-office.webp" alt="Home office setup">
-        <p>Functional Home Office Design</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="container">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <input type="phone" placeholder="Your Phone Number" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+    <section id="contact" class="container">
+      <h2>Contact Us</h2>
+      <form action="./thank-you.html" method="get">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Your Phone" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
-     <p>Blessing Mpofu | WDD 231</p>
-     <p>Corlett Quality Kitchens And Home | Johannesburg, South Africa | info@corlettqualty.org</p>
+    <p>Blessing Mpofu | WDD 231</p>
+    <p>Corlett Quality Kitchens And Home | Johannesburg, South Africa | info@corlettquality.org</p>
+    <div class="social-icons">
+      <a href="https://web.facebook.com/blessing.mpofu.35" target="_blank" rel="noopener" aria-label="Facebook">
+        <img src="../chamber/images/social/facebook.webp" alt="Facebook" width="24" height="24" />
+      </a>
+      <a href="https://web.facebook.com/blessing.mpofu.35" target="_blank" rel="noopener" aria-label="Messenger">
+        <img src="../chamber/images/social/facebook-messenger.webp" alt="Messenger" width="24" height="24" />
+      </a>
+      <a href="https://www.linkedin.com/in/blessingmpofu1" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="../chamber/images/social/linkedin.webp" alt="LinkedIn" width="24" height="24" />
+      </a>
+      <a href="https://wa.me/+27845179156" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <img src="../chamber/images/social/whatsapp.webp" alt="WhatsApp" width="24" height="24" />
+      </a>
+      <a href="https://x.com/bullsurus" target="_blank" rel="noopener" aria-label="X (formerly Twitter)">
+        <img src="../chamber/images/social/twitter.webp" alt="X (Twitter)" width="24" height="24" />
+      </a>
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+        <img src="../chamber/images/social/youtube.webp" alt="YouTube" width="24" height="24" />
+      </a>
+      <a href="https://t.me/BlessingMpofu" target="_blank" rel="noopener" aria-label="Telegram">
+        <img src="../chamber/images/social/telegram.webp" alt="Telegram" width="24" height="24" />
+      </a>
+    </div>
     <p><span id="currentyear"></span></p>
     <p><span id="lastmodified"></span></p>
   </footer>

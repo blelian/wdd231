@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Blessing Mpofu, WDD231 student at BYU Idaho">
+  <meta name="description" content="Explore our expert kitchen design services—from custom cabinetry to lighting and surface selection. Transform your home with Corlett Quality Kitchens.">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/corlett.css" media="screen and (max-width: 600px)">
+  <link rel="stylesheet" href="styles/corlett-larger.css" media="screen and (min-width: 601px)">
+  <title>Services | Corlett Quality Kitchens and Home</title>
+  <script src="../scripts/date.js"></script>
+  <style>
+    .icon {
+      color: #8B0000;
+      margin-bottom: 0.5rem;
+    }
+
+    .card {
+      background-color: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0.5rem;
+      color: #333;
+    }
+
+    .card p {
+      color: #555;
+    }
+
+ .cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta .btn {
+  background-color: #000;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+  display: inline-block;
+  margin-top: 0.5rem;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.cta .btn:hover {
+  background-color: #c59d5f;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+/* Initial fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cta .btn i {
+  margin-right: 0.5rem;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="branding">
+        <div class="logo-space">
+          <img src="images/corlett.webp" alt="Corlett Kitchens logo" width="60" height="72">
+        </div>
+        <p>Corlett Quality Kitchens And Home</p>
+      </div>
+      <nav role="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container" id="services">
+      <h2>Our Specialized Kitchen Design Services</h2>
+      <div class="grid">
+        <article class="card">
+          <i class="fas fa-pencil-ruler fa-2x icon"></i>
+          <h3>Consultation & Planning</h3>
+          <p>Work with our designers to explore layout ideas that match your lifestyle and space.</p>
+        </article>
+        <article class="card">
+          <i class="fas fa-couch fa-2x icon"></i>
+          <h3>Custom Cabinetry</h3>
+          <p>We craft and install kitchen cabinets tailored to your style and storage needs.</p>
+        </article>
+        <article class="card">
+          <i class="fas fa-lightbulb fa-2x icon"></i>
+          <h3>Lighting & Fixtures</h3>
+          <p>Choose lighting schemes that enhance ambiance and functionality in your kitchen.</p>
+        </article>
+        <article class="card">
+          <i class="fas fa-border-style fa-2x icon"></i>
+          <h3>Surface Selection</h3>
+          <p>Guidance on selecting countertops, tiles, and materials that balance beauty and durability.</p>
+        </article>
+      </div>
+      <div class="cta">
+        <p>Ready to transform your kitchen?</p>
+        <a href="contact.html" class="btn"><i class="fas fa-envelope"></i>Contact Us Today</a>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>Blessing Mpofu | WDD 231</p>
+    <p>Corlett Quality Kitchens And Home | Johannesburg, South Africa | info@corlettquality.org</p>
+    <div class="social-icons">
+      <a href="https://web.facebook.com/blessing.mpofu.35" target="_blank" rel="noopener" aria-label="Facebook">
+        <img src="../chamber/images/social/facebook.webp" alt="Facebook" width="24" height="24" />
+      </a>
+      <a href="https://web.facebook.com/blessing.mpofu.35" target="_blank" rel="noopener" aria-label="Messenger">
+        <img src="../chamber/images/social/facebook-messenger.webp" alt="Messenger" width="24" height="24" />
+      </a>
+      <a href="https://www.linkedin.com/in/blessingmpofu1" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="../chamber/images/social/linkedin.webp" alt="LinkedIn" width="24" height="24" />
+      </a>
+      <a href="https://wa.me/+27845179156" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <img src="../chamber/images/social/whatsapp.webp" alt="WhatsApp" width="24" height="24" />
+      </a>
+      <a href="https://x.com/bullsurus" target="_blank" rel="noopener" aria-label="X (formerly Twitter)">
+        <img src="../chamber/images/social/twitter.webp" alt="X (Twitter)" width="24" height="24" />
+      </a>
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+        <img src="../chamber/images/social/youtube.webp" alt="YouTube" width="24" height="24" />
+      </a>
+      <a href="https://t.me/BlessingMpofu" target="_blank" rel="noopener" aria-label="Telegram">
+        <img src="../chamber/images/social/telegram.webp" alt="Telegram" width="24" height="24" />
+      </a>
+    </div>
+
+    <p><span id="currentyear"></span></p>
+    <p><span id="lastmodified"></span></p>
+  </footer>
+</body>
+</html>
