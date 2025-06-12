@@ -38,7 +38,6 @@ header .container {
   align-items: center;
   position: relative;
   text-align: center;
-  
 }
 
 header .branding {
@@ -72,7 +71,7 @@ nav.nav-open ul {
 
 nav.nav-open {
   max-height: 500px; 
-  transition: max-height 0.4s ease;
+  transition: max-height var(--transition-duration) ease;
 }
 
 .hamburger-menu {
@@ -93,8 +92,6 @@ nav.nav-open {
 .hamburger-menu.active {
   color: var(--accent-color);
 }
-
-
 
 h2 {
   font-size: 1.5rem;
@@ -133,35 +130,49 @@ h2 {
   text-align: center;
 }
 
-.hero-gallery {
-  display: block;
-  height: var(--main-height, auto);
+/* Hero Gallery Container */
+#hero-gallery {
+  position: relative;
   overflow: hidden;
-  margin-top: 0;  
-  margin-top: 0;
-  margin-top: -32px;
+  width: 100%;
+  height: var(--main-height);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* Individual hero image wrapper */
 .hero-image {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  display: none;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 0;
+  pointer-events: none;
+  object-fit: cover; /* fallback */
 }
 
 .hero-image.active {
-  display: block;
+  opacity: 1;
+  z-index: 1;
+  pointer-events: auto;
 }
 
 .hero-image img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
   object-fit: cover;
+  display: block;
+  border-radius: 8px;
 }
 
+/* Optional hero text overlay */
 .hero-text {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%; 
+  left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
@@ -180,8 +191,8 @@ h2 {
 
 .hero-text .btn {
   display: inline-block;
-  background: #000;
-  color: #fff;
+  background: var(--header-bg);
+  color: var(--btn-text);
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 5px;
@@ -232,7 +243,7 @@ h2 {
 #contact button {
   padding: 0.75rem;
   background-color: var(--header-bg);
-  color: #fff;
+  color: var(--btn-text);
   border: none;
   border-radius: 6px;
   font-size: 1rem;
@@ -250,38 +261,50 @@ footer {
   padding: 1rem;
   background: var(--footer-bg);
 }
+
+/* Navigation arrows */
 .nav-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--header-bg) !important;
-  color: #fff;
-  border: none !important;
+  background: var(--header-bg);
+  color: var(--btn-text);
+  border: none;
   font-size: 2rem;
   padding: 0.25rem 0.5rem;
   cursor: pointer;
   z-index: 999;
   opacity: 0.7;
   border-radius: 5px;
-  
+  transition: opacity 0.3s ease;
 }
+
 .nav-arrow:hover {
   opacity: 1;
 }
-.nav-arrow:first-of-type {
+
+.nav-arrow.prev {
   left: 10px;
 }
-.nav-arrow:last-of-type {
+
+.nav-arrow.next {
   right: 10px;
 }
+
+/* Slideshow toggle button */
 .slideshow-toggle {
   display: block;
   margin: 1rem auto;
-  background-color: black;
-  color: white;
+  background-color: var(--header-bg);
+  color: var(--btn-text);
   border: none;
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slideshow-toggle:hover {
+  background-color: var(--accent-color);
 }
