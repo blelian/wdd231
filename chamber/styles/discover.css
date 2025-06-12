@@ -37,3 +37,6 @@ footer p span {
   min-width: 8ch;
   min-height: 1em;
 }
+.first{
+  display: none;
+}
