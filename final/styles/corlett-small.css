@@ -170,6 +170,7 @@ h2 {
   z-index: 10;
   width: 90%;
   max-width: 500px;
+  padding-bottom: 6rem; 
 }
 
 .hero-text h1 {
@@ -262,6 +263,7 @@ footer {
   z-index: 999;
   opacity: 0.7;
   border-radius: 5px;
+  
 }
 .nav-arrow:hover {
   opacity: 1;
@@ -271,4 +273,15 @@ footer {
 }
 .nav-arrow:last-of-type {
   right: 10px;
+}
+.slideshow-toggle {
+  display: block;
+  margin: 1rem auto;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
