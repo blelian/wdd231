@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroSection = document.querySelector("#hero-gallery");
   heroSection.appendChild(toggleBtn);
 
-  // Manual navigation arrows
   const prevBtn = document.createElement("button");
   prevBtn.setAttribute("aria-label", "Previous slide");
   prevBtn.classList.add("nav-arrow");
@@ -78,7 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
   nextBtn.classList.add("nav-arrow");
   nextBtn.textContent = "▶";
 
-  // Style both arrows
   [prevBtn, nextBtn].forEach(btn => {
     btn.style.backgroundColor = "black";
     btn.style.color = "white";
@@ -95,8 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.style.boxShadow = "none";
   });
 
-  prevBtn.style.left = "10px";    
-  nextBtn.style.right = "10px";   
+  prevBtn.style.left = "10px";
+  nextBtn.style.right = "10px";
 
   prevBtn.addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
@@ -112,6 +110,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   heroSection.appendChild(prevBtn);
   heroSection.appendChild(nextBtn);
+
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  heroSection.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, false);
+
+  heroSection.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipeGesture();
+  }, false);
+
+  function handleSwipeGesture() {
+    if (touchEndX < touchStartX - 50) {
+      currentIndex = (currentIndex + 1) % images.length;
+      setActive(currentIndex);
+      resetSlideshow();
+    } else if (touchEndX > touchStartX + 50) {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      setActive(currentIndex);
+      resetSlideshow();
+    }
+  }
 
   const nav = document.querySelector("nav");
   const navList = nav?.querySelector("ul");

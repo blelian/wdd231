@@ -1,0 +1,27 @@
+  .hero-gallery {
+    height: 400px; /* slightly shorter for tablets */
+    gap: 0.5rem;
+  }
+
+  .hero-text {
+    right: 20%; /* tighter positioning */
+    bottom: 12%; /* slightly higher */
+    max-width: 60%; /* allow text to flow better */
+    font-size: 0.95rem;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .slideshow-toggle,
+  .manual-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+}
