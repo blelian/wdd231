@@ -70,8 +70,11 @@ nav.nav-open ul {
 }
 
 nav.nav-open {
-  max-height: 500px;
+  max-height: 100px;
   transition: max-height var(--transition-duration) ease;
+}
+nav a:hover{
+  color: var(--accent-color);
 }
 
 .hamburger-menu {
