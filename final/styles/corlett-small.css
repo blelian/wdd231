@@ -33,11 +33,14 @@ header {
 }
 
 header .container {
+
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   text-align: center;
+  margin-top: 0.2rem; 
+  padding-top: 0.2rem;
 }
 
 header .branding {
