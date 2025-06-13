@@ -66,7 +66,7 @@ nav ul {
 }
 
 nav.nav-open ul {
-  display:grid;
+  display: block;
 }
 
 nav.nav-open {
@@ -79,9 +79,9 @@ nav a:hover{
 
 .hamburger-menu {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 2.5rem;
+  top: 0.2rem;
+  right: 0.2rem;
+  font-size: 1.5rem;
   background: none;
   border: none;
   cursor: pointer;
