@@ -66,11 +66,11 @@ nav ul {
 }
 
 nav.nav-open ul {
-  display:list-item;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   font-size: 10px;
-  margin-right: -10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-left: 40px;
 }
 
 nav.nav-open {
