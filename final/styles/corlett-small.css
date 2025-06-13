@@ -72,7 +72,7 @@ nav.nav-open ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  font-size: 0.7rem;
+  font-size: 0.5rem;
   padding-left: 40px;
 }
 
@@ -290,7 +290,6 @@ footer {
   background: var(--header-bg);
   color: var(--btn-text);
 }
-/* 1. Prevent layout shift: reserve aspect ratio for hero images */
 .hero-image img {
   display: block;
   width: 100%;
@@ -299,14 +298,37 @@ footer {
   object-fit: cover;
 }
 
-/* 2. Fix hamburger overlap: force menu toggle above content */
 .hamburger-menu,
 nav.nav-open {
   z-index: 10000;
 }
 
-/* 3. Reduce nav arrow size: smaller font and padding */
 .nav-arrow {
   font-size: 1.5rem;
   padding: 0.2rem 0.4rem;
+}
+.hero-progress {
+  position: absolute;
+  bottom: 10px; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 4px;
+  z-index: 20;
+}
+
+.hero-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.hero-dots .dot {
+  width: 6px;
+  height: 6px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 50%;
+}
+
+.hero-dots .dot.active {
+  background: var(--accent-color);
 }
