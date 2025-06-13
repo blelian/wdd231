@@ -51,9 +51,9 @@ header .branding img {
   max-width: 100px;
   height: auto;
 }
-
+ 
 header .branding p {
-  font-size: 1.2rem;
+  font-size: 15px;
   margin: 0;
 }
 
