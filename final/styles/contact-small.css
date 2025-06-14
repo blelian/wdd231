@@ -167,10 +167,6 @@ dialog::backdrop {
   background: rgba(0, 0, 0, 0.5);
 }
 
-
-#menu-toggle {
-  display: none;
-}
 main .container h2{
     font-size: 1.5rem;
 }
@@ -180,4 +176,47 @@ main .modal h3{
 header .branding p {
   font-size: 0.8rem;
   margin: 0;
+}
+nav ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+}
+
+nav.nav-open ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  padding-left: 1.5rem;
+}
+
+nav.nav-open {
+  max-height: 100px;
+  transition: max-height var(--transition-duration) ease;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  background-color: var(--close-hover-color);
+  color: var(--accent-color);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--btn-text);
+  z-index: 9999;
+}
+
+.hamburger-menu.active {
+  color: var(--accent-color);
 }

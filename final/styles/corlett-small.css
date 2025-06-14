@@ -9,6 +9,7 @@
   --btn-text: #fff;
   --input-border: #ccc;
   --footer-bg: #f4f4f4;
+  --close-hover-color: #555;
 }
 
 body {
@@ -72,7 +73,7 @@ nav.nav-open ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  font-size: 0.4rem;
+  font-size: 0.8rem;
   padding-left: 1.5rem;
 }
 
@@ -331,4 +332,11 @@ nav.nav-open {
 
 .hero-dots .dot.active {
   background: var(--accent-color);
+}
+nav ul li a.active,
+nav ul li a:hover {
+  background-color: var(--close-hover-color);
+  color: var(--accent-color);
+  border-radius: 5px;
+  padding: 0.5rem;
 }

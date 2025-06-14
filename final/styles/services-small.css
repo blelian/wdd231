@@ -1,10 +1,25 @@
+:root {
+  --text-color: #333;
+  --background-color: #f9f9f9;
+  --header-bg: #000;
+  --accent-color: #a07e49; 
+  --card-bg: #f4f4f4;
+  --btn-bg: #c59d5f;
+  --btn-text: #ffffff;
+  --input-border: #ccc;
+  --footer-bg: #f4f4f4;
+  --icon-color: #8B0000; 
+  --card-color: #555;
+  --close-hover-color: #555; 
+}
+
 .icon {
-      color: #8B0000;
+      color: var(--icon-color);
       margin-bottom: 0.5rem;
     }
 
     .card {
-      background-color: #f9f9f9;
+      background-color: var(--background-color);
       padding: 1.5rem;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -18,11 +33,11 @@
 
     .card h3 {
       margin-top: 0.5rem;
-      color: #333;
+      color: var(--text-color);
     }
 
     .card p {
-      color: #555;
+      color: var(--card-color);
     }
 
  .cta {
@@ -31,8 +46,8 @@
 }
 
 .cta .btn {
-  background-color: #000;
-  color: white;
+  background-color: var(--header-bg);
+  color: var(--btn-text);
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 5px;
@@ -47,7 +62,7 @@
 }
 
 .cta .btn:hover {
-  background-color: #c59d5f;
+  background-color: var(--btn-bg);
   transform: translateY(-5px);
   cursor: pointer;
 }
@@ -83,7 +98,7 @@ nav.nav-open ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  font-size: 0.4rem;
+  font-size: 0.8rem;
   padding-left: 1.5rem;
 }
 
@@ -112,4 +127,11 @@ nav a:hover{
 }
 main .container h2{
     font-size: 1.5rem;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  background-color: var(--close-hover-color);
+  color: var(--accent-color);
+  border-radius: 5px;
+  padding: 0.5rem;
 }

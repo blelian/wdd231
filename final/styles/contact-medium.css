@@ -176,3 +176,13 @@ main .container h2{
 main .modal h3{
     font-size: 1.5rem;
 }
+nav ul li a.active,
+nav ul li a:hover {
+  background-color: var(--close-hover-color);
+  color: var(--accent-color);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.hamburger-menu {
+  display: none !important;
+}

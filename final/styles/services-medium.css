@@ -1,3 +1,17 @@
+:root{
+  --close-hover-color: #555; 
+  --text-color: #333;
+  --background-color: #f9f9f9;
+  --header-bg: #000;
+  --accent-color: #a07e49; 
+  --card-bg: #f4f4f4;
+  --btn-bg: #c59d5f;
+  --btn-text: #ffffff;
+  --input-border: #ccc;
+  --footer-bg: #f4f4f4;
+  --icon-color: #8B0000; 
+  --card-color: #555;
+}
 .icon {
       color: #8B0000;
       margin-bottom: 0.5rem;
@@ -101,4 +115,14 @@ header .branding p {
 }
 main .container h2{
     font-size: 1.5rem;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  background-color: var(--close-hover-color);
+  color: var(--accent-color);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.hamburger-menu {
+  display: none !important;
 }
