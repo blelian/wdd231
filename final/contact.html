@@ -6,18 +6,24 @@
   <meta name="author" content="Blessing Mpofu, WDD231 student at BYU Idaho">
   <meta name="description" content="Contact page for Corlett Quality Kitchens and Home">
   <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/corlett.css" media="screen and (max-width: 600px)">
-  <link rel="stylesheet" href="styles/corlett-larger.css" media="screen and (min-width: 601px)">
-  <link rel="stylesheet" href="styles/contact-larger.css" media="screen and (min-width: 601px)">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/contact-small.css" media="screen and (min-width: 320px) and (max-width:640px)">
+  <link rel="stylesheet" href="styles/contact-medium.css" media="screen and (min-width: 641px) and (max-width:1024px)">
+  <link rel="stylesheet" href="styles/contact-larger.css" media="screen and (min-width: 1025px)">
   <title>Contact | Corlett Quality Kitchens and Home</title>
   <script src="../scripts/date.js" defer></script>
+  <script src="scripts/contact.js" defer></script>
 </head>
 <body>
   <header>
     <div class="container">
       <div class="branding">
         <div class="logo-space">
-          <img src="images/corlett.webp" alt="Logo" width="60" height="72">
+          <img src="images/corlett.webp" 
+               srcset="images/corlett-small.webp 1x,
+                       images/corlett-medium.webp 2x,
+                       images/corlett.webp 3x" 
+          alt="Logo" width="60" height="72">
         </div>
         <p>Corlett Quality Kitchens And Home</p>
       </div>
@@ -30,7 +36,7 @@
       </nav>
     </div>
   </header>
-
+<main>
   <section class="container" id="contact">
     <h2>Contact Us</h2>
     <p>Have questions or ready to start your kitchen transformation? Reach out below!</p>
@@ -86,6 +92,7 @@
       </div>
     </div>
   </section>
+  </main>
 
   <footer>
     <p>Blessing Mpofu | WDD 231</p>
@@ -116,30 +123,5 @@
     <p><span id="currentyear"></span></p>
     <p><span id="lastmodified"></span></p>
   </footer>
-
-  <script>
-    const modalBtns = document.querySelectorAll('.modal-btn');
-    const modals = document.querySelectorAll('.modal');
-    const closes = document.querySelectorAll('.close');
-
-    modalBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const modal = document.getElementById(btn.dataset.modal);
-        modal.style.display = 'block';
-      });
-    });
-
-    closes.forEach(close => {
-      close.addEventListener('click', () => {
-        close.closest('.modal').style.display = 'none';
-      });
-    });
-
-    window.addEventListener('click', (e) => {
-      modals.forEach(modal => {
-        if (e.target === modal) modal.style.display = 'none';
-      });
-    });
-  </script>
 </body>
 </html>

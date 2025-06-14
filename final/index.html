@@ -27,7 +27,7 @@
 
   <title>Home | Corlett Quality Kitchens and Home</title>
 
-  <script src="scripts/corlett.js" defer></script>
+  <script type="module" src="scripts/modules/main.js" defer></script>
   <script src="../scripts/date.js" defer></script>
 </head>
 <body>
@@ -37,10 +37,13 @@
         <div class="logo-space">
           <img 
             src="images/corlett.webp" 
+            srcset="images/corlett-small.webp 1x,
+                    images/corlett-medium.webp 2x,
+                    images/corlett.webp 3x"
             alt="Corlett Quality Kitchens Logo" 
-            width="60" height="72" 
-            srcset="images/corlett.webp 1x, images/corlett@2x.webp 2x, images/corlett@3x.webp 3x"
-            fetchpriority="high" />
+            width="40" height="48" 
+            
+            fetchpriority="high"/>
         </div>
         <p>Corlett Quality Kitchens And Home</p>
       </div>

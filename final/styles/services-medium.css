@@ -1,0 +1,104 @@
+.icon {
+      color: #8B0000;
+      margin-bottom: 0.5rem;
+    }
+
+    .card {
+      background-color: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0.5rem;
+      color: #333;
+    }
+
+    .card p {
+      color: #555;
+    }
+
+ .cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta .btn {
+  background-color: #000;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+  display: inline-block;
+  margin-top: 0.5rem;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.cta .btn:hover {
+  background-color: #c59d5f;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+/* Initial fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cta .btn i {
+  margin-right: 0.5rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card,
+.image-placeholder {
+  background: var(--card-bg);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card,
+.image-placeholder {
+  background: var(--card-bg);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+header .branding p {
+  font-size: 20px;
+  margin: 0;
+}
+main .container h2{
+    font-size: 1.5rem;
+}

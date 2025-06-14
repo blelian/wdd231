@@ -18,27 +18,31 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap">
   </noscript>
   <link rel="stylesheet" href="../styles/normalize.css">
-  <link rel="stylesheet" href="styles/member.css">
-  <link rel="stylesheet" href="styles/member-larger.css" media="screen and (min-width: 600px)">
+  <link rel="stylesheet" href="styles/member.css" media="screen and (max-width:600px)">
+  <link rel="stylesheet" href="styles/member-larger.css" media="screen and (min-width: 601px)">
   <title>Midlands Chamber of Commerce</title>
   <script src="../scripts/date.js" defer></script>
   <script src="scripts/members.js" defer></script>
 </head>
 <body>
-  <header>
     <div class="header-container">
-      <img src="images/commerce.webp" alt="Chamber Logo" class="logo" width="60" height="72" fetchpriority="high">
-    </div>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="discover.html">Discover</a></li>
-      <li><a href="directory.html" class="active" aria-current="page">Directory</a></li>
-      <li><a href="join.html">Join</a></li>
-    </ul>
-  </nav>
-  <main>
+    <header>
+      <img src="images/commerce.webp" alt="Chamber Logo" class="logo" />
+      <div class="header-content">
+        <p class="header-title">Midlands</p>
+        <p class="header-subtitle">Chamber of Commerce</p>
+      </div>
+      <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+    </header>
+    <nav id="primary-nav">
+      <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html" class="active" aria-current="page" >Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </div>  <main>
     <h1>Midlands Chamber of Commerce</h1>
     <section class="toggle-controls">
       <button id="list-view-button" aria-label="Switch to list view">⋮⋮⋮</button>
@@ -51,6 +55,29 @@
   <footer>
      <p>Blessing Mpofu | WDD 231</p>
      <p>Midlands Chamber of Commerce | Midlands, Zimbabwe | info@midlandschamber.org</p>
+     <div class="social-icons">
+      <a href="https://web.facebook.com/blessing.mpofu.35" target="_blank" rel="noopener" aria-label="Facebook">
+        <img src="images/social/facebook.webp" alt="Facebook" width="24" height="24" />
+      </a>
+      <a href="https://web.facebook.com/blessing.mpofu.35" target="_blank" rel="noopener" aria-label="Messenger">
+        <img src="images/social/facebook-messenger.webp" alt="Messenger" width="24" height="24" />
+      </a>
+      <a href="https://www.linkedin.com/in/blessingmpofu1" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="images/social/linkedin.webp" alt="LinkedIn" width="24" height="24" />
+      </a>
+      <a href="https://wa.me/+27845179156" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <img src="images/social/whatsapp.webp" alt="WhatsApp" width="24" height="24" />
+      </a>
+      <a href="https://twitter.com/X.com/bullsurus" target="_blank" rel="noopener" aria-label="Twitter">
+        <img src="images/social/twitter.webp" alt="Twitter" width="24" height="24" />
+      </a>
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+        <img src="images/social/youtube.webp" alt="YouTube" width="24" height="24" />
+      </a>
+      <a href="https://t.me/BlessingMpofu" target="_blank" rel="noopener" aria-label="Telegram">
+        <img src="images/social/telegram.webp" alt="Telegram" width="24" height="24" />
+      </a>
+    </div>
     <p><span id="currentyear"></span></p>
     <p><span id="lastmodified"></span></p>
   </footer>

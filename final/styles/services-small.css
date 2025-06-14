@@ -1,0 +1,115 @@
+.icon {
+      color: #8B0000;
+      margin-bottom: 0.5rem;
+    }
+
+    .card {
+      background-color: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0.5rem;
+      color: #333;
+    }
+
+    .card p {
+      color: #555;
+    }
+
+ .cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta .btn {
+  background-color: #000;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+  display: inline-block;
+  margin-top: 0.5rem;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.cta .btn:hover {
+  background-color: #c59d5f;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+/* Initial fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cta .btn i {
+  margin-right: 0.5rem;
+}
+header .branding p {
+  font-size: 15px;
+  margin: 0;
+}
+nav ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+}
+
+nav.nav-open ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.4rem;
+  padding-left: 1.5rem;
+}
+
+nav.nav-open {
+  max-height: 100px;
+  transition: max-height var(--transition-duration) ease;
+}
+nav a:hover{
+  color: var(--accent-color);
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--btn-text);
+  z-index: 9999;
+}
+
+.hamburger-menu.active {
+  color: var(--accent-color);
+}
+main .container h2{
+    font-size: 1.5rem;
+}

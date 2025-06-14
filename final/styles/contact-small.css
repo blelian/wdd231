@@ -15,6 +15,7 @@
   --close-hover-color: #555;    
 }
 
+
 .contact-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -169,4 +170,14 @@ dialog::backdrop {
 
 #menu-toggle {
   display: none;
+}
+main .container h2{
+    font-size: 1.5rem;
+}
+main .modal h3{
+    font-size: 1.5rem;
+}
+header .branding p {
+  font-size: 0.8rem;
+  margin: 0;
 }

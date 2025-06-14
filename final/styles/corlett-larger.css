@@ -25,74 +25,6 @@ body {
   color: var(--header-bg);
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 2rem 0;
-}
-
-header {
-  background-color: var(--header-bg);
-  color: white;
-  padding: 1rem 0;
-  text-align: center;
-}
-
-header .container {
-  display: block;
-  text-align: center;
-}
-
-header .branding {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-}
-
-header .branding img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-}
-
-header .branding p {
-  font-size: xx-large;
-  font-weight: bolder;
-  margin: 0;
-  color: var(--background-color);
-}
-
-nav {
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  display: inline-flex;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover,
-nav a:focus {
-    border-bottom: 2px solid var(--accent-color);
-    text-decoration: underline;
-    color: var(--accent-color);
-}
-
 h2 {
   margin-bottom: 1rem;
   font-size: 2rem;
@@ -299,5 +231,5 @@ html {
   scroll-behavior: smooth;
 }
 .hamburger-menu{
-  display: none;
+  display: none
 }
